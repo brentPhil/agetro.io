@@ -1,8 +1,7 @@
 .menu-btn {
-    position: relative;
-    top: .5em;
     cursor: pointer;
     transition: all 0.5s ease-out;
+    margin-top: 1vh;
 }
 .menu-btn:hover .btn-line{
     background: map-get($colortype, accent );

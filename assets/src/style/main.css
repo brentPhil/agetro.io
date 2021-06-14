@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana);
 @media only screen and (min-width: 600px) {
   header ul {
     display: -webkit-box;
@@ -45,11 +46,10 @@
 }
 
 .menu-btn {
-  position: relative;
-  top: .5em;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  margin-top: 1vh;
 }
 
 .menu-btn:hover .btn-line {

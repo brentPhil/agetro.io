@@ -1,0 +1,39 @@
+@media only screen and (min-width: 600px) {
+    header{
+      ul{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .menu-btn{
+      display: none;
+    }
+    .skill_container{
+      display: flex;
+    }
+    .g{
+      img{
+        width: 200px;
+        margin: 0 1em 0 3em;
+      }
+    }
+    .skills{
+      span{
+        display: flex;
+      }
+    }
+    .about_container{
+      display: flex; 
+    }
+    .illus {
+        order: 2;
+        img{
+        margin: 0 1em 0 3em;
+      }}
+    .disc{
+      order: 1;
+    }
+    
+  
+}
+  

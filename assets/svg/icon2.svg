@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59" height="70" viewBox="20 0 55 70">
+  <g id="Group_241" data-name="Group 241" transform="translate(-539.17 -2876)">
+    <g id="Group_187" data-name="Group 187" transform="translate(132.862 2259)">
+      <path id="Polygon_3" data-name="Polygon 3" d="M474.384,637.629a12,12,0,0,1,0,20.742L443.238,676.5A12,12,0,0,1,425.2,666.13V629.87a12,12,0,0,1,18.037-10.37Z" fill="#111440"/>
+      <rect id="Rectangle_339" data-name="Rectangle 339" width="12.893" height="62" transform="translate(406.308 617)" fill="none"/>
+    </g>
+    <path id="Path_335" data-name="Path 335" d="M467.348,635.316v25.37a2.006,2.006,0,0,1-2,2H431.7a2,2,0,0,1-2-2v-25.37a2,2,0,0,1,2-2h33.65a2,2,0,0,1,1.98,1.73A2.449,2.449,0,0,1,467.348,635.316Z" transform="translate(132.862 2259)" fill="#fff"/>
+    <rect id="Rectangle_344" data-name="Rectangle 344" width="24.425" height="24.425" rx="0.96" transform="translate(573.424 2894.73)" fill="#8b89d9"/>
+    <g id="Group_240" data-name="Group 240" transform="translate(132.862 2259)">
+      <rect id="Rectangle_345" data-name="Rectangle 345" width="6.964" height="2.011" rx="0.758" transform="translate(431.649 636.547)" fill="#8b89d9"/>
+      <rect id="Rectangle_346" data-name="Rectangle 346" width="6.964" height="2.011" rx="0.758" transform="translate(431.649 640.504)" fill="#8b89d9"/>
+      <rect id="Rectangle_347" data-name="Rectangle 347" width="6.964" height="2.011" rx="0.758" transform="translate(431.649 657.328)" fill="#8b89d9"/>
+      <rect id="Rectangle_348" data-name="Rectangle 348" width="6.964" height="2.011" rx="0.758" transform="translate(431.649 653.371)" fill="#8b89d9"/>
+      <circle id="Ellipse_88" data-name="Ellipse 88" cx="3.482" cy="3.482" r="3.482" transform="translate(431.649 644.461)" fill="#8b89d9"/>
+    </g>
+    <rect id="Rectangle_349" data-name="Rectangle 349" width="20" height="20" rx="2" transform="translate(583 2889)" fill="#38358c"/>
+    <path id="Path_336" data-name="Path 336" d="M445.477,655.328a7.33,7.33,0,0,0,6.512.415c1.254-.54,2.391-1.446,3.749-1.588,2.13-.224,4.018,1.486,6.154,1.633" transform="translate(132.862 2258.86)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Icon_awesome-pen" data-name="Icon awesome-pen" d="M452.44,641.735l2.972,2.972-6.453,6.453-2.65.292a.557.557,0,0,1-.615-.492.552.552,0,0,1,0-.123l.294-2.651Zm4.811-.442-1.4-1.4a1.115,1.115,0,0,0-1.577,0l-1.313,1.313,2.972,2.972,1.313-1.313a1.115,1.115,0,0,0,0-1.577Z" transform="translate(141.366 2253.487)" fill="#fff" stroke="#38358c" stroke-width="0.5"/>
+    <path id="Path_337" data-name="Path 337" d="M443.658,653.995" transform="translate(132.862 2259)" fill="none" stroke="#030504" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

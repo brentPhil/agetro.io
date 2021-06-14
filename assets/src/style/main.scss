@@ -1,0 +1,359 @@
+$colortype: (
+    line:  #0b033d,
+    dark:  #02000D,
+    color5:#204F8C,
+    color4:#05001d,
+    color3:#1A4A73,
+    color2:#0457c5,
+    color1:#CCCCC3,
+    accent:#30F2DF,
+
+);
+@import '../style/comp/media';
+@import '../style/comp/nav';
+
+html{
+    font-size: 18px;
+}
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($colortype, color4 ); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: map-get($colortype, color2 ); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($colortype, accent );
+  }
+body{
+    margin: 0;
+    background-color: map-get($colortype, dark );
+    font-family: Verdana, Geneva, Tahoma;
+    color: map-get($colortype, color2 ); 
+}
+
+// ---------------------------------nav_container---------------------------
+.nav_container{
+    width: 100%;
+    padding: .5em 0 4em 0;
+    background-image:linear-gradient( to bottom
+    ,map-get($colortype, dark ) 50%,#000f1a00 100%);
+    position: fixed;
+    z-index: 4;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: .2em 0;
+    a{
+        img{
+            width: 4.5em;
+            margin: 0 .8em;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        display: none;
+        @extend %text;
+        a{
+            padding: .7em .8em;
+            text-decoration: none;
+            color: map-get($colortype, color2 );
+            font-size: 15px;
+            transition: .3s;
+        }
+        a:hover{
+            color:  map-get($colortype, accent );
+        }
+    }
+
+}
+//-------------------------------------------body---------------------------------------
+.body_container{
+    height: auto;
+    padding: 1em 0;
+}
+.headline{
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.body{
+    width: 85%;
+    margin: 0 auto;
+    h3{
+        font-size: 1em;
+        margin: 0;
+    }
+    h2{
+        margin: 0;
+        font-size: 1.2em;
+    }
+    h4{
+        margin: 0;
+        margin-bottom: 1em;
+        color: map-get($colortype, color1);
+        font-weight: lighter;
+        line-height: 20px;
+        font-size: 15px;
+    }
+    text{
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        color: map-get($colortype, color2);
+        transition: .5s ease;
+        width: 100px;
+    }
+    a:hover{
+        color: map-get($colortype, accent);
+    }
+}
+.quote{
+    width: 70%;
+}
+.line{
+    width: 100%;
+    border-left: solid map-get($colortype, line) 1px;
+    display: grid;
+    padding: 1em 0 1em 1em;
+
+}
+
+.body_content{
+    display: none;
+    display: grid;
+    grid-template-rows: repeat(auto);
+    grid-gap: 3em;
+}
+.skill_container, 
+.about_container, 
+.work_container,
+.footer{
+    h3{
+        font-size: 1.1em;
+    }
+}
+// ---------------------------------my_skills---------------------------
+
+.skills{
+    order: 1;
+    display: grid;
+    grid-template-rows: repeat(auto);
+    grid-gap: 1em;
+    margin: 0;
+    h4{
+        margin: 0;
+        margin-bottom: .5em;
+        @extend %text;
+    }
+    h5{
+        margin: 0;
+        @extend %ltext;
+    }
+    span{
+      display: flex;  
+    }
+}
+.icon{
+    display: grid;
+    place-content: center;
+        img{
+        width: 40px;
+        margin-right: 1em;
+    }
+}
+.g{
+    display: grid;
+    place-content: center;
+    order: 2;
+    img{
+        width: 200px;
+        margin: 2em;
+    }
+}
+.skills, .about, .form{
+    margin-right: 1.2em;
+}
+// -------------------------------------------------------------------
+%text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+%ltext{
+
+    font-weight: lighter;
+    line-height: 1.5em;
+    font-size: .8rem;
+    color: map-get($colortype, color1);
+}
+// ---------------------------------my_work---------------------------
+.work{
+    padding: 1em 0;
+    border: solid 1px map-get($colortype, line);
+    width: 90%;
+    h4{
+        margin: 0 1em;
+        @extend %text;
+    }
+    h5{
+        margin: 1.2em 1.4em;
+        @extend %ltext;
+    }
+    a{
+        text-decoration: none;
+        color: map-get($colortype , color2 );
+        font-weight: bold;
+        margin: 0 1em;
+        font-size: 1rem;
+    }
+
+}
+// ---------------------------------about_me---------------------------
+.about_container{
+    width: 100%;
+}
+.illus{
+    display: grid;
+    place-content: center;
+ img{
+    width: 200px;
+    margin:2em;
+  }
+}
+.about{
+    display: grid;
+    grid-template-rows: repeat(auto);
+    h4{
+        margin-bottom: .5em;
+        @extend %text;
+    }
+        h6{
+            margin: 0;
+            @extend %ltext;
+            font-style: italic;
+            
+        }
+}
+// ---------------------------------footer---------------------------
+.footer{
+    width: 100%;
+    margin-bottom: 10vh;
+    .int{
+        width: 100%;
+        margin: 1em 0;
+    }
+    h2{
+        color: white;
+        font-size: 1.5rem;
+        }
+        h3{
+            margin: 0;
+        }
+    h5{
+        
+        color: map-get($colortype, color1);
+        font-weight: lighter;
+        line-height: 1.5em;
+        font-size: 1rem;
+        margin: 1em 0;
+        a{
+            color: map-get($colortype , accent );
+            margin: 0;
+            text-decoration: underline;
+            font-size: 1rem;
+        }
+    }
+    form{
+        margin: .5em 0;
+    }
+}
+
+.form-group {
+	position: relative;
+    margin: 0 0 1.5em 0;
+    width: 100%;
+	span {
+		font-size: .8rem;
+		color: white;
+		position: absolute;
+		top: -1vw;
+		transition: all .2s ease;
+		transform-origin: 0 0;
+		cursor: text;
+        font-weight: lighter;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+	.border {
+		height: 2px;
+		display: block;
+		position: relative;
+		width: 95%;
+		left: 0;
+        top: -2px;
+		transform: scaleX(0);
+		transition: all .3s ease;
+		background: map-get($colortype , accent );
+	}
+}
+.mb{
+    margin-bottom: .5em;
+}
+.form-control {
+	border: none;
+    color: white;
+	border-bottom: solid map-get($colortype , color2 ) 2px;
+	display: block;
+	width: 95%;
+    padding: .2em 0;
+	font-size: 15px;
+	background: none;
+    outline: none;
+	&:focus, &:valid {
+		& + span {
+			transform: translateY(-13px) scale(.7);
+            color: map-get($colortype , accent );
+			& + .border {
+				transform: scaleX(1);
+			}
+		}
+	}
+    
+}
+.send{
+        border: none;
+        background: none;
+        color: map-get($colortype , color2 );
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transition: .5s;
+        padding: 0;
+    }
+    .send:hover{
+        color: map-get($colortype , accent );
+    }
+textarea.form-control {
+    height: 60px;
+}
+
+

@@ -45,6 +45,15 @@
   }
 }
 
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 30px;
+  }
+  body {
+    width: 70%;
+  }
+}
+
 .menu-btn {
   cursor: pointer;
   -webkit-transition: all 0.5s ease-out;
@@ -53,7 +62,7 @@
 }
 
 .menu-btn:hover .btn-line {
-  background: #30F2DF;
+  background: #0FF2B2;
 }
 
 .menu-btn .btn-line {
@@ -68,7 +77,7 @@
 
 .menu-btn .s {
   width: 1.2em;
-  background: #30F2DF;
+  background: #0FF2B2;
   float: right;
 }
 
@@ -84,7 +93,7 @@
 .menu-btn.close .btn-line:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(0.4em, -0.47em);
           transform: rotate(-45deg) translate(0.4em, -0.47em);
-  background: #30F2DF;
+  background: #0FF2B2;
   width: 1.7em;
 }
 
@@ -99,7 +108,7 @@
   padding-right: 5%;
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
-  background-color: #02000D;
+  background-color: #001324;
   pointer-events: none;
   display: -ms-grid;
   display: grid;
@@ -127,7 +136,7 @@
 }
 
 .menu-nav h1:hover {
-  color: #30F2DF;
+  color: #0FF2B2;
 }
 
 .menu.show {
@@ -192,27 +201,27 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0457c5;
+  background: #0BBF8C;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #30F2DF;
+  background: #0FF2B2;
 }
 
 body {
-  margin: 0;
-  background-color: #02000D;
+  margin: 0 auto;
+  background-color: #001324;
   font-family: Verdana, Geneva, Tahoma;
-  color: #0457c5;
+  color: #0BBF8C;
 }
 
 .nav_container {
   width: 100%;
   padding: .5em 0 4em 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #02000D), to(#000f1a00));
-  background-image: linear-gradient(to bottom, #02000D 50%, #000f1a00 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #001324), to(#000f1a00));
+  background-image: linear-gradient(to bottom, #001324 50%, #000f1a00 100%);
   position: fixed;
   z-index: 4;
 }
@@ -232,9 +241,9 @@ header {
   padding: .2em 0;
 }
 
-header a img {
-  width: 4.5em;
-  margin: 0 .8em;
+header a {
+  position: grid;
+  place-content: center;
 }
 
 header ul {
@@ -246,14 +255,14 @@ header ul {
 header ul a {
   padding: .7em .8em;
   text-decoration: none;
-  color: #0457c5;
+  color: #0BBF8C;
   font-size: 15px;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 header ul a:hover {
-  color: #30F2DF;
+  color: #0FF2B2;
 }
 
 .body_container {
@@ -267,6 +276,16 @@ header ul a:hover {
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+.headline span {
+  position: absolute;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.headline span img {
+  width: 700px;
 }
 
 .body {
@@ -299,14 +318,14 @@ header ul a:hover {
 
 .body a {
   text-decoration: none;
-  color: #0457c5;
+  color: #0BBF8C;
   -webkit-transition: .5s ease;
   transition: .5s ease;
   width: 100px;
 }
 
 .body a:hover {
-  color: #30F2DF;
+  color: #0FF2B2;
 }
 
 .quote {
@@ -315,7 +334,7 @@ header ul a:hover {
 
 .line {
   width: 100%;
-  border-left: solid #0b033d 1px;
+  border-left: solid #001F3A 1px;
   display: -ms-grid;
   display: grid;
   padding: 1em 0 1em 1em;
@@ -330,7 +349,6 @@ header ul a:hover {
   grid-gap: 3em;
 }
 
-.skill_container h3,
 .about_container h3,
 .work_container h3,
 .footer h3 {
@@ -338,6 +356,23 @@ header ul a:hover {
 }
 
 .skills {
+  color: white;
+}
+
+.skills h2 {
+  margin: 2em 0;
+}
+
+.skills span {
+  border: solid #107369 1px;
+  padding: .5em 1em;
+  font-size: 1rem;
+  font-weight: lighter;
+  border-radius: 2em;
+  margin-right: 1em;
+}
+
+.what {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -346,19 +381,25 @@ header ul a:hover {
   -ms-grid-rows: ()[auto];
       grid-template-rows: repeat(auto);
   grid-gap: 1em;
-  margin: 0;
+  margin: 2em 0;
 }
 
-.skills h4 {
+.what h2 {
+  color: white;
+  margin-top: 2em;
+}
+
+.what h4 {
   margin: 0;
   margin-bottom: .5em;
+  color: #0BBF8C;
 }
 
-.skills h5 {
+.what h5 {
   margin: 0;
 }
 
-.skills span {
+.what span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,31 +416,16 @@ header ul a:hover {
   margin-right: 1em;
 }
 
-.g {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.g img {
-  width: 200px;
-  margin: 2em;
-}
-
-.skills, .about, .form {
+.what, .about, .form {
   margin-right: 1.2em;
 }
 
-header ul, .skills h4, .work h4, .about h4 {
+header ul, .what h4, .work h4, .about h4 {
   font-size: 1.1rem;
   font-weight: bold;
-  color: white;
 }
 
-.skills h5, .work h5, .about h6 {
+.what h5, .work h5, .about h6 {
   font-weight: lighter;
   line-height: 1.5em;
   font-size: .8rem;
@@ -408,12 +434,13 @@ header ul, .skills h4, .work h4, .about h4 {
 
 .work {
   padding: 1em 0;
-  border: solid 1px #0b033d;
+  border: solid 1px #001F3A;
   width: 90%;
 }
 
 .work h4 {
   margin: 0 1em;
+  color: white;
 }
 
 .work h5 {
@@ -422,7 +449,7 @@ header ul, .skills h4, .work h4, .about h4 {
 
 .work a {
   text-decoration: none;
-  color: #0457c5;
+  color: #0BBF8C;
   font-weight: bold;
   margin: 0 1em;
   font-size: 1rem;
@@ -433,14 +460,16 @@ header ul, .skills h4, .work h4, .about h4 {
 }
 
 .illus {
+  position: relative;
+  left: -1em;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  padding: 4em 0;
 }
 
 .illus img {
-  width: 200px;
-  margin: 2em;
+  width: 300px;
 }
 
 .about {
@@ -487,7 +516,7 @@ header ul, .skills h4, .work h4, .about h4 {
 }
 
 .footer h5 a {
-  color: #30F2DF;
+  color: #0FF2B2;
   margin: 0;
   text-decoration: underline;
   font-size: 1rem;
@@ -528,7 +557,7 @@ header ul, .skills h4, .work h4, .about h4 {
           transform: scaleX(0);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  background: #30F2DF;
+  background: #0FF2B2;
 }
 
 .mb {
@@ -538,7 +567,7 @@ header ul, .skills h4, .work h4, .about h4 {
 .form-control {
   border: none;
   color: white;
-  border-bottom: solid #0457c5 2px;
+  border-bottom: solid #001F3A 2px;
   display: block;
   width: 95%;
   padding: .2em 0;
@@ -550,7 +579,7 @@ header ul, .skills h4, .work h4, .about h4 {
 .form-control:focus + span, .form-control:valid + span {
   -webkit-transform: translateY(-13px) scale(0.7);
           transform: translateY(-13px) scale(0.7);
-  color: #30F2DF;
+  color: #0FF2B2;
 }
 
 .form-control:focus + span + .border, .form-control:valid + span + .border {
@@ -561,7 +590,7 @@ header ul, .skills h4, .work h4, .about h4 {
 .send {
   border: none;
   background: none;
-  color: #0457c5;
+  color: #0BBF8C;
   font-size: 20px;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -571,7 +600,7 @@ header ul, .skills h4, .work h4, .about h4 {
 }
 
 .send:hover {
-  color: #30F2DF;
+  color: #0FF2B2;
 }
 
 textarea.form-control {

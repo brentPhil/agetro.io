@@ -26,14 +26,21 @@
       display: flex; 
     }
     .illus {
-        order: 2;
-        img{
+      order: 2;
+      img{
         margin: 0 1em 0 3em;
-      }}
+      }
+    }
     .disc{
       order: 1;
     }
-    
-  
-}
-  
+  }
+
+  @media only screen and (min-width: 800px) {
+    html{
+      font-size: 30px;
+    }
+    body{
+      width: 70%;
+    }
+  }

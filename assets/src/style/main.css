@@ -278,16 +278,6 @@ header ul a:hover {
   place-content: center;
 }
 
-.headline span {
-  position: absolute;
-  margin: 0 auto;
-  width: 200px;
-}
-
-.headline span img {
-  width: 700px;
-}
-
 .body {
   width: 85%;
   margin: 0 auto;

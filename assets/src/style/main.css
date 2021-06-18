@@ -345,23 +345,6 @@ header ul a:hover {
   font-size: 1.1em;
 }
 
-.skills {
-  color: white;
-}
-
-.skills h2 {
-  margin: 2em 0;
-}
-
-.skills span {
-  border: solid #107369 1px;
-  padding: .5em 1em;
-  font-size: 1rem;
-  font-weight: lighter;
-  border-radius: 2em;
-  margin-right: 1em;
-}
-
 .what {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;

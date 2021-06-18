@@ -290,7 +290,7 @@ header ul a:hover {
 
 .body h2 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.5rem;
 }
 
 .body h4 {
@@ -298,8 +298,8 @@ header ul a:hover {
   margin-bottom: 1em;
   color: #CCCCC3;
   font-weight: lighter;
-  line-height: 20px;
-  font-size: 15px;
+  line-height: 1.5em;
+  font-size: 1.1rem;
 }
 
 .body text {
@@ -319,7 +319,7 @@ header ul a:hover {
 }
 
 .quote {
-  width: 70%;
+  width: 80%;
 }
 
 .line {

@@ -1,12 +1,12 @@
 $colortype: (
-    line:  #0b033d,
-    dark:  #02000D,
+    line:  #001F3A,
+    dark:  #001324,
     color5:#204F8C,
     color4:#05001d,
-    color3:#1A4A73,
-    color2:#0457c5,
+    color3:#107369,
+    color2:#0BBF8C,
     color1:#CCCCC3,
-    accent:#30F2DF,
+    accent:#0FF2B2,
 );
 @import url(//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana);
 @import '../style/comp/media';
@@ -36,7 +36,7 @@ html{
     background: map-get($colortype, accent );
   }
 body{
-    margin: 0;
+    margin: 0 auto;
     background-color: map-get($colortype, dark );
     font-family: Verdana, Geneva, Tahoma;
     color: map-get($colortype, color2 ); 
@@ -60,10 +60,8 @@ header{
     margin: 0 auto;
     padding: .2em 0;
     a{
-        img{
-            width: 4.5em;
-            margin: 0 .8em;
-        }
+        position: grid;
+        place-content: center;
     }
     ul{
         list-style-type: none;
@@ -144,7 +142,6 @@ header{
     grid-template-rows: repeat(auto);
     grid-gap: 3em;
 }
-.skill_container, 
 .about_container, 
 .work_container,
 .footer{
@@ -152,17 +149,37 @@ header{
         font-size: 1.1em;
     }
 }
-// ---------------------------------my_skills---------------------------
-
+// ---------------------------------what i do---------------------------
 .skills{
+    color: white;
+    h2{
+        margin: 2em 0;
+    }
+    span{
+        border: solid map-get($colortype , color3 ) 1px;
+        padding: .5em 1em;
+        font-size: 1rem;
+        font-weight: lighter;
+        border-radius: 2em;
+        margin-right: 1em;
+    }
+}
+// ---------------------------------what i do---------------------------
+
+.what{
     order: 1;
     display: grid;
     grid-template-rows: repeat(auto);
     grid-gap: 1em;
-    margin: 0;
+    margin: 2em 0;
+    h2{
+        color: white;
+        margin-top: 2em;
+    }
     h4{
         margin: 0;
         margin-bottom: .5em;
+        color: map-get($colortype , color2 );
         @extend %text;
     }
     h5{
@@ -181,23 +198,13 @@ header{
         margin-right: 1em;
     }
 }
-.g{
-    display: grid;
-    place-content: center;
-    order: 2;
-    img{
-        width: 200px;
-        margin: 2em;
-    }
-}
-.skills, .about, .form{
+.what, .about, .form{
     margin-right: 1.2em;
 }
 // -------------------------------------------------------------------
 %text {
     font-size: 1.1rem;
     font-weight: bold;
-    color: white;
 }
 %ltext{
 
@@ -214,6 +221,7 @@ header{
     h4{
         margin: 0 1em;
         @extend %text;
+        color: white;
     }
     h5{
         margin: 1.2em 1.4em;
@@ -233,12 +241,14 @@ header{
     width: 100%;
 }
 .illus{
+    position: relative;
+    left: -1em;
     display: grid;
     place-content: center;
- img{
-    width: 200px;
-    margin:2em;
-  }
+    padding: 4em 0;
+    img{
+        width: 300px;
+    }
 }
 .about{
     display: grid;
@@ -321,7 +331,7 @@ header{
 .form-control {
 	border: none;
     color: white;
-	border-bottom: solid map-get($colortype , color2 ) 2px;
+	border-bottom: solid map-get($colortype , line ) 2px;
 	display: block;
 	width: 95%;
     padding: .2em 0;

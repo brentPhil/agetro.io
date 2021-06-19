@@ -278,13 +278,13 @@ header ul a:hover {
 
 .year {
   position: fixed;
-  top: 80vh;
+  top: 78vh;
   z-index: 4;
 }
 
 .arrow {
   z-index: -1;
-  top: 85vh;
+  top: 83vh;
   right: 7%;
 }
 

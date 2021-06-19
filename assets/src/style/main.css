@@ -68,7 +68,6 @@
 .menu-btn .btn-line {
   width: 1.7em;
   height: 4px;
-  border-radius: .2em;
   margin: 0 0 .4em 0;
   background: white;
   -webkit-transition: all 0.5s ease-out;
@@ -191,7 +190,6 @@ html {
 
 ::-webkit-scrollbar {
   width: 10px;
-  border-radius: 5px;
 }
 
 /* Track */
@@ -202,7 +200,6 @@ html {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #0BBF8C;
-  border-radius: 5px;
 }
 
 /* Handle on hover */
@@ -265,6 +262,32 @@ header ul a:hover {
   color: #0FF2B2;
 }
 
+.bgl {
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  z-index: -1;
+}
+
+.bgl img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.year {
+  position: fixed;
+  top: 85vh;
+  z-index: 4;
+}
+
+.arrow {
+  z-index: -1;
+  top: 90vh;
+  right: 7%;
+}
+
 .body_container {
   height: auto;
   padding: 1em 0;
@@ -279,7 +302,7 @@ header ul a:hover {
 }
 
 .body {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 

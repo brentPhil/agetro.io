@@ -280,6 +280,7 @@ header ul a:hover {
   position: fixed;
   top: 80vh;
   z-index: 4;
+  margin-left: .2em;
 }
 
 .arrow {
@@ -402,8 +403,7 @@ header ul a:hover {
 }
 
 .icon {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   place-content: center;
 }
 
@@ -461,7 +461,7 @@ header ul, .what h4, .work h4, .about h4 {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 
 .illus img {
@@ -477,6 +477,8 @@ header ul, .what h4, .work h4, .about h4 {
 
 .about h4 {
   margin-bottom: .5em;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .about h6 {

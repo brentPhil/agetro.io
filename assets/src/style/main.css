@@ -283,7 +283,7 @@ header ul a:hover {
 }
 
 .arrow {
-  z-index: -1;
+  z-index: 0;
   top: 83vh;
   right: 7%;
 }

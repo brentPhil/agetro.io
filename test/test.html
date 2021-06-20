@@ -1,124 +1,47 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content=
-            "width=device-width" />
-  
-    <meta http-equiv="X-UA-Compatible" 
-            content="ie=edge" />
-  
-    <!-- <link rel="stylesheet" href=
-"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-   -->
-    <title>
-    </title>
-      
-    <style>
-        .menu-btn {
-            position: absolute;
-            z-index: 3;
-            right: 35px;
-            top: 35px;
-            cursor: pointer;
-            transition: all 0.5s ease-out;
-        }
-        .menu-btn .btn-line {
-            width: 28px;
-            height: 3px;
-            margin: 0 0 5px 0;
-            background: black;
-            transition: all 0.5s ease-out;
-        }
-        .menu-btn.close {
-            transform: rotate(180deg);
-        }
-        .menu-btn.close .btn-line:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-  
-        .menu-btn.close .btn-line:nth-child(2) {
-            opacity: 0;
-        }
-  
-        .menu-btn.close .btn-line:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-            background: #30F2DF;
-        }
-        .menu {
-            position: fixed;
-            top: 10em;
-            right: 35px;
-            width: 100%;
-            opacity: 0.9;
-            visibility: hidden;
-            text-align: right;
-            font-size: large;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .menu a{
-            text-decoration: none;
-        }
-  
-        .menu.show {
-            visibility: visible;
-        }
-        .nav-item:nth-child(1) {
-            transition-delay: 0.1s;
-        }
-  
-        .nav-item:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-  
-        .nav-item:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-  
-        .nav-item:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
 </head>
-  
-<body id="bg-img">
-    <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+<body>
+    <div class="container">
+        <div class="contain">
+            <span class="one">
+                <svg xmlns="http://www.w3.org/2000/svg" width="176" height="88" viewBox="0 0 176 88">
+                <path id="Path_347" data-name="Path 347" d="M88,0a88,88,0,0,1,88,88H0A88,88,0,0,1,88,0Z" fill="#0bbf8c"/>
+                </svg>
+            </span>
+            <span class="con">
+            <div class="c">
+                <svg xmlns="http://www.w3.org/2000/svg" width="136.676" height="136.676" viewBox="0 0 136.676 136.676">
+                    <path id="Path_350" data-name="Path 350" d="M249.351,0A136.676,136.676,0,0,0,112.676,136.676H249.351Z" transform="translate(-112.676)" fill="#227870"/>
+                  </svg>              
+            </div>
+            <div class="cc">
+                <svg xmlns="http://www.w3.org/2000/svg" width="136.676" height="136.676" viewBox="0 0 136.676 136.676">
+                    <path id="Path_349" data-name="Path 349" d="M112.676,0A136.676,136.676,0,0,1,249.351,136.676H112.676Z" transform="translate(-112.676)" fill="#92e5cd"/>
+                  </svg>              
+            </div>
+            </span> 
         </div>
-  
-        <nav class="menu">
-            <ul class="menu-nav">
-                <li class="nav-item current">
-                    <a href="#" class="nav-link">
-                        <h1>what.i_do{}</h1> 
-                    </a>
-                </li>
-  
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                       <h1>.work{}</h1> 
-                    </a>
-                </li>
-  
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                       <h1>.about{}</h1>
-                    </a>
-                </li>
-  
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                       <h1>.contact{}</h1>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-  
+        <div class="menu-btn">                 
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        </div>
+    </div>
+    <nav class="menu">
+        <ul class="menu-nav">
+            <li class="nav-item current"><a href="#" class="nav-link"><h1>.skills{}</h1></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><h1>.work{}</h1></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><h1>.about{}</h1></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><h1>.contact{}</h1></a></li>
+        </ul>
+    </nav>
+
     <script>
         const menuBtn = 
             document.querySelector(".menu-btn");
@@ -143,20 +66,18 @@
                 menuNav.classList.add("show");
                 navItems.forEach((item) =>
                     item.classList.add("show"));
-  
+                navItems.forEach((item) =>
+                    item.classList.remove("close"));
                 showMenu = true;
             } else {
                 menuBtn.classList.remove("close");
                 menu.classList.remove("show");
                 menuNav.classList.remove("show");
                 navItems.forEach((item) =>
-                    item.classList.remove("show"));
-  
-                // Reset the menu state
+                    item.classList.add("close"));
                 showMenu = false;
             }
         }
     </script>
 </body>
-  
 </html>

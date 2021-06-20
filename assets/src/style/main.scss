@@ -1,6 +1,6 @@
 $colortype: (
-    line:  #001F3A,
-    dark:  #001324,
+    line:  #001E16,
+    dark:  black,
     color5:#204F8C,
     color4:#05001d,
     color3:#107369,
@@ -101,7 +101,10 @@ header{
 .arrow{
     z-index: 0;
     top: 85vh;
-    right: 7%;
+    right: 0;
+    img{
+        width: 30%;
+    }
 }
 .body_container{
     height: auto;

@@ -107,7 +107,7 @@
   padding-right: 5%;
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
-  background-color: #001324;
+  background-color: black;
   pointer-events: none;
   display: -ms-grid;
   display: grid;
@@ -209,7 +209,7 @@ html {
 
 body {
   margin: 0 auto;
-  background-color: #001324;
+  background-color: black;
   font-family: Verdana, Geneva, Tahoma;
   color: #0BBF8C;
 }
@@ -217,8 +217,8 @@ body {
 .nav_container {
   width: 100%;
   padding: .5em 0 4em 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #001324), to(#000f1a00));
-  background-image: linear-gradient(to bottom, #001324 50%, #000f1a00 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, black), to(#000f1a00));
+  background-image: linear-gradient(to bottom, black 50%, #000f1a00 100%);
   position: fixed;
   z-index: 4;
 }
@@ -286,7 +286,11 @@ header ul a:hover {
 .arrow {
   z-index: 0;
   top: 85vh;
-  right: 7%;
+  right: 0;
+}
+
+.arrow img {
+  width: 30%;
 }
 
 .body_container {
@@ -348,7 +352,7 @@ header ul a:hover {
 
 .line {
   width: 100%;
-  border-left: solid #001F3A 1px;
+  border-left: solid #001E16 1px;
   display: -ms-grid;
   display: grid;
   padding: 1em 0 1em 1em;
@@ -430,7 +434,7 @@ header ul, .what h4, .work h4, .about h4 {
 
 .work {
   padding: 1em 0;
-  border: solid 1px #001F3A;
+  border: solid 1px #001E16;
   width: 90%;
 }
 
@@ -565,7 +569,7 @@ header ul, .what h4, .work h4, .about h4 {
 .form-control {
   border: none;
   color: white;
-  border-bottom: solid #001F3A 2px;
+  border-bottom: solid #001E16 2px;
   display: block;
   width: 95%;
   padding: .2em 0;

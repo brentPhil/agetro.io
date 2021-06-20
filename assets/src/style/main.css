@@ -407,7 +407,8 @@ header ul a:hover {
 }
 
 .icon {
-  display: none;
+  display: -ms-grid;
+  display: grid;
   place-content: center;
 }
 
@@ -457,6 +458,10 @@ header ul, .what h4, .work h4, .about h4 {
 
 .about_container {
   width: 100%;
+}
+
+.resume h5 {
+  color: white;
 }
 
 .illus {

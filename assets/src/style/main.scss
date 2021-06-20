@@ -8,6 +8,7 @@ $colortype: (
     color1:#CCCCC3,
     accent:#0FF2B2,
 );
+
 @import url(//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana);
 @import '../style/comp/media';
 @import '../style/comp/nav';
@@ -215,7 +216,7 @@ header{
     }
 }
 .icon{
-    display: none;
+    display: grid;
     place-content: center;
         img{
         width: 40px;
@@ -263,6 +264,11 @@ header{
 // ---------------------------------about_me---------------------------
 .about_container{
     width: 100%;
+}
+.resume{
+    h5{
+        color: white;
+    }
 }
 .illus{
     position: relative;

@@ -36,7 +36,7 @@ html{
 body{
     margin: 0 auto;
     background-color: map-get($colortype, dark );
-    font-family: 'Share-TechMono', sans-serif;
+    font-family: 'Share-TechMono';
     color: map-get($colortype, color2 ); 
 }
 

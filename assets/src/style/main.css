@@ -284,7 +284,7 @@ header ul a:hover {
 }
 
 .arrow {
-  z-index: 0;
+  z-index: 1;
   top: 85vh;
   right: 0;
 }

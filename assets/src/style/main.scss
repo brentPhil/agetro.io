@@ -2,14 +2,13 @@ $colortype: (
     line:  #001E16,
     dark:  black,
     color5:#204F8C,
-    color4:#05001d,
+    color4:#071110,
     color3:#107369,
     color2:#0BBF8C,
     color1:#CCCCC3,
     accent:#0FF2B2,
 );
-
-@import url(//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana);
+@import url('http://fonts.cdnfonts.com/css/share-techmono-2');
 @import '../style/comp/media';
 @import '../style/comp/nav';
 
@@ -37,7 +36,7 @@ html{
 body{
     margin: 0 auto;
     background-color: map-get($colortype, dark );
-    font-family: Verdana, Geneva, Tahoma;
+    font-family: 'Share-TechMono', sans-serif;
     color: map-get($colortype, color2 ); 
 }
 
@@ -122,12 +121,12 @@ header{
     width: 90%;
     margin: 0 auto;
     h3{
-        font-size: 1em;
+        font-size: 1.3em;
         margin: 0;
     }
     h2{
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     h4{
         margin: 0;
@@ -135,7 +134,7 @@ header{
         color: map-get($colortype, color1);
         font-weight: lighter;
         line-height: 1.5em;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     text{
         color: white;
@@ -174,21 +173,7 @@ header{
         font-size: 1.1em;
     }
 }
-// ---------------------------------what i do---------------------------
-// .skills{
-//     color: white;
-//     h2{
-//         margin: 2em 0;
-//     }
-//     span{
-//         border: solid map-get($colortype , color3 ) 1px;
-//         padding: .5em 1em;
-//         font-size: 1rem;
-//         font-weight: lighter;
-//         border-radius: 2em;
-//         margin-right: 1em;
-//     }
-// }
+
 // ---------------------------------what i do---------------------------
 
 .what{
@@ -196,7 +181,8 @@ header{
     display: grid;
     grid-template-rows: repeat(auto);
     grid-gap: 1em;
-    margin: 2em 0;
+    margin: 0;
+    border-top: solid map-get($colortype , line ) 1px;
     h2{
         color: white;
         margin-top: 2em;
@@ -271,13 +257,9 @@ header{
     }
 }
 .illus{
-    position: relative;
-    left: -1em;
-    display: grid;
-    place-content: center;
     padding: 2em 0;
     img{
-        width: 300px;
+        width: 250px;
     }
 }
 .about{

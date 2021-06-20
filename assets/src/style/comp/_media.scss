@@ -1,46 +1,17 @@
 @media only screen and (min-width: 600px) {
-    header{
-      ul{
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    .menu-btn{
-      display: none;
-    }
-    .skill_container{
-      display: flex;
-    }
-    .g{
-      img{
-        width: 200px;
-        margin: 0 1em 0 3em;
-      }
-    }
-    .skills{
-      span{
-        display: flex;
-      }
-    }
-    .about_container{
-      display: flex; 
-    }
-    .illus {
-      order: 2;
-      img{
-        margin: 0 1em 0 3em;
-      }
-    }
-    .disc{
-      order: 1;
+  .about_container{
+    display: flex;
+  }
+  .illus{
+    margin: 1em;
+    img{
+      width: 100px;
     }
   }
-
-  @media only screen and (min-width: 800px) {
-    html{
-      font-size: 30px;
-    }
-    body{
-      width: 70%;
-    }
+}
+@media only screen and (max-width: 500px) {
+  .illus{
+    display: grid;
+    place-content: center;
   }
+}

@@ -1,56 +1,23 @@
-@import url(//db.onlinewebfonts.com/c/1ae9b9868bd3121e932225b140a839a5?family=Verdana);
+@import url("http://fonts.cdnfonts.com/css/share-techmono-2");
 @media only screen and (min-width: 600px) {
-  header ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .menu-btn {
-    display: none;
-  }
-  .skill_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .g img {
-    width: 200px;
-    margin: 0 1em 0 3em;
-  }
-  .skills span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .about_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .illus {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    margin: 1em;
   }
   .illus img {
-    margin: 0 1em 0 3em;
-  }
-  .disc {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    width: 100px;
   }
 }
 
-@media only screen and (min-width: 800px) {
-  html {
-    font-size: 30px;
-  }
-  body {
-    width: 70%;
+@media only screen and (max-width: 500px) {
+  .illus {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
   }
 }
 
@@ -194,7 +161,7 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #05001d;
+  background: #071110;
 }
 
 /* Handle */
@@ -210,7 +177,7 @@ html {
 body {
   margin: 0 auto;
   background-color: black;
-  font-family: Verdana, Geneva, Tahoma;
+  font-family: 'Share-TechMono', sans-serif;
   color: #0BBF8C;
 }
 
@@ -312,13 +279,13 @@ header ul a:hover {
 }
 
 .body h3 {
-  font-size: 1em;
+  font-size: 1.3em;
   margin: 0;
 }
 
 .body h2 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .body h4 {
@@ -327,7 +294,7 @@ header ul a:hover {
   color: #CCCCC3;
   font-weight: lighter;
   line-height: 1.5em;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .body text {
@@ -382,7 +349,8 @@ header ul a:hover {
   -ms-grid-rows: ()[auto];
       grid-template-rows: repeat(auto);
   grid-gap: 1em;
-  margin: 2em 0;
+  margin: 0;
+  border-top: solid #001E16 1px;
 }
 
 .what h2 {
@@ -465,16 +433,11 @@ header ul, .what h4, .work h4, .about h4 {
 }
 
 .illus {
-  position: relative;
-  left: -1em;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
   padding: 2em 0;
 }
 
 .illus img {
-  width: 300px;
+  width: 250px;
 }
 
 .about {

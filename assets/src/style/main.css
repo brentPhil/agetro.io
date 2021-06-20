@@ -177,7 +177,7 @@ html {
 body {
   margin: 0 auto;
   background-color: black;
-  font-family: 'Share-TechMono';
+  font-family: 'Share-TechMono', sans-serif;
   color: #0BBF8C;
 }
 

@@ -8,13 +8,12 @@ $colortype: (
     color1:#CCCCC3,
     accent:#0FF2B2,
 );
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rationale&display=swap');
 @import url('http://fonts.cdnfonts.com/css/share-techmono-2');
-@import '../style/comp/media';
 @import '../style/comp/nav';
 
-html{
-    font-size: 18px;
-}
+
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -36,7 +35,7 @@ html{
 body{
     margin: 0 auto;
     background-color: map-get($colortype, dark );
-    font-family: 'Share-TechMono', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     color: map-get($colortype, color2 ); 
 }
 
@@ -99,7 +98,7 @@ header{
     margin-left: .2em;
 }
 .arrow{
-    z-index: 1;
+    z-index: -1;
     top: 85vh;
     right: 0;
     img{
@@ -177,15 +176,12 @@ header{
 // ---------------------------------what i do---------------------------
 
 .what{
-    order: 1;
     display: grid;
     grid-template-rows: repeat(auto);
     grid-gap: 1em;
-    margin: 0;
-    border-top: solid map-get($colortype , line ) 1px;
+    margin: 1em 0;
     h2{
         color: white;
-        margin-top: 2em;
     }
     h4{
         margin: 0;
@@ -251,16 +247,23 @@ header{
 .about_container{
     width: 100%;
 }
+.illus{
+    display: grid;
+    place-content: center;
+    margin: 2em 0;
+    img{
+      width: 40vw;
+  }
+  }
 .resume{
     h5{
+        margin: 0;
+        margin-top: 10px;
         color: white;
     }
 }
-.illus{
-    padding: 2em 0;
-    img{
-        width: 250px;
-    }
+.fc{
+    width: 100%;
 }
 .about{
     display: grid;
@@ -273,18 +276,17 @@ header{
     }
         h6{
             margin: 0;
-            @extend %ltext;
-            font-style: italic;
-            
+            @extend %ltext;            
         }
 }
+
+
 // ---------------------------------footer---------------------------
 .footer{
     width: 100%;
     margin-bottom: 10vh;
     .int{
-        width: 100%;
-        margin: 1em 0;
+        margin-bottom: 1em;
     }
     h2{
         color: white;
@@ -298,7 +300,7 @@ header{
         color: map-get($colortype, color1);
         font-weight: lighter;
         line-height: 1.5em;
-        font-size: 1rem;
+        font-size: .83em;
         margin: 1em 0;
         a{
             color: map-get($colortype , accent );
@@ -315,17 +317,16 @@ header{
 .form-group {
 	position: relative;
     margin: 0 0 1.5em 0;
-    width: 100%;
 	span {
 		font-size: .8rem;
 		color: white;
 		position: absolute;
-		top: -1vw;
+		top: .5em;
 		transition: all .2s ease;
 		transform-origin: 0 0;
 		cursor: text;
         font-weight: lighter;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        pointer-events: none;
 	}
 	.border {
 		height: 2px;
@@ -349,12 +350,12 @@ header{
 	display: block;
 	width: 95%;
     padding: .2em 0;
-	font-size: 15px;
+	font-size: 1.1rem;
 	background: none;
     outline: none;
 	&:focus, &:valid {
 		& + span {
-			transform: translateY(-13px) scale(.7);
+			transform: translateY(-1em) scale(.7);
             color: map-get($colortype , accent );
 			& + .border {
 				transform: scaleX(1);
@@ -367,9 +368,8 @@ header{
         border: none;
         background: none;
         color: map-get($colortype , color2 );
-        font-size: 20px;
+        font-size: 1.1rem;
         font-weight: bold;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         transition: .5s;
         padding: 0;
     }
@@ -381,3 +381,76 @@ textarea.form-control {
 }
 
 
+  @media only screen and (min-width: 600px) {
+    .about_container{
+      display: flex;
+    }
+    html{
+        font-size: 20px;
+      }
+  
+    .disc{
+      order: 1;
+    }
+    .what{
+      width: 400px;
+    }
+    .illus{
+      order: 2;
+      margin: 0 2em;
+      float: right;
+      img{
+        width: 220px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    html{
+      font-size: 23px;
+    }
+    .body{
+      width: 80%;
+    }
+    .about_container{
+      display: flex;
+    }
+    .disc{
+      order: 1;
+    }
+    .what{
+        width: 500px;
+      }
+    .illus{
+      order: 2;
+      margin: 0 1.5em;
+      img{
+        width: 250px;
+      }
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .body{
+        width: 75%;
+      }
+    html{
+        font-size: 25px;
+      }
+    .illus{
+        order: 2;
+        margin: 0 1.5em;
+        img{
+          width: 300px;
+        }
+    }
+    .int{
+        width: 500px;
+        margin: 0;
+    }
+    .fc{
+        margin: 0 0 0 1em;
+    }
+    .footer{
+        display: flex;
+    }
+  }

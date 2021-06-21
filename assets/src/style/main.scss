@@ -355,7 +355,7 @@ header{
     outline: none;
 	&:focus, &:valid {
 		& + span {
-			transform: translateY(-1em) scale(.7);
+			transform: translateY(-1.5em) scale(.7);
             color: map-get($colortype , accent );
 			& + .border {
 				transform: scaleX(1);

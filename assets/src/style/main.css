@@ -522,8 +522,8 @@ header ul, .what h4, .work h4, .about h4 {
 }
 
 .form-control:focus + span, .form-control:valid + span {
-  -webkit-transform: translateY(-1em) scale(0.7);
-          transform: translateY(-1em) scale(0.7);
+  -webkit-transform: translateY(-1.5em) scale(0.7);
+          transform: translateY(-1.5em) scale(0.7);
   color: #0FF2B2;
 }
 

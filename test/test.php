@@ -15,14 +15,14 @@
 </style>
 <body>
 <span class="form">
-    <form action="form.php">
+    <form action="form.php" method="POST" >
         <div class="form-group">
             <input type="text" name="name" class="form-control"  required>
             <span>NAME</span>
             <span class="border text"></span>
         </div>
         <div class="form-group">
-            <input type="text" name="mail" class="form-control"  required>
+            <input type="text" name="email" class="form-control"  required>
             <span>EMAIL</span>
             <span class="border text"></span>
         </div>
@@ -36,10 +36,9 @@
             <span>MESSAGE</span>
             <span class="border"></span>
         </div>
-        <input class="send" onclick="sendMail()" type="submit" value=".send{}">
+        <input name="send" class="send" type="submit" value=".send{}">
     </form>
 </span>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <?php
 				if(ISSET($_SESSION['status'])){
 					if($_SESSION['status'] == "ok"){

@@ -80,15 +80,8 @@ header{
 }
 //-------------------------------------------body---------------------------------------
 .bgl{
-    height: 90vh;
-    display: grid;
-    place-content: center;
-    position: absolute;
-    z-index: -1;
     img{
-        max-width: 600px;
-        width: 100%;
-
+        width: 350px;
     }
 }
 .year{
@@ -110,10 +103,7 @@ header{
     padding: 1em 0;
 }
 .headline{
-    width: 90%;
-    height: 100vh;
-    display: grid;
-    place-content: center;
+    padding: 23vh 0;
 }
 
 .body{
@@ -274,7 +264,7 @@ header{
         font-size: 1.5rem;
         font-weight: bold;
     }
-        h6{
+        h5{
             margin: 0;
             @extend %ltext;            
         }
@@ -406,11 +396,19 @@ textarea.form-control {
   }
 
   @media only screen and (min-width: 800px) {
-    html{
-      font-size: 23px;
-    }
+    
     .body{
       width: 80%;
+    }
+    .headline{
+        display: flex;
+        justify-content: space-between;
+    }
+    .bgl{
+        order: 2;
+    }
+    q{
+        order: 1;
     }
     .about_container{
       display: flex;

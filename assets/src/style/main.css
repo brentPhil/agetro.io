@@ -579,6 +579,9 @@ textarea.form-control {
   .what {
     width: 400px;
   }
+  .int {
+    margin-right: 2em;
+  }
   .illus {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -636,6 +639,12 @@ textarea.form-control {
   .illus img {
     width: 250px;
   }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 6vh;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -649,7 +658,9 @@ textarea.form-control {
     padding: 31vh 0;
   }
   .bgl img {
-    width: 400px;
+    width: 500px;
+    position: relative;
+    top: -1.5em;
   }
   .illus {
     -webkit-box-ordinal-group: 3;
@@ -661,7 +672,7 @@ textarea.form-control {
     width: 300px;
   }
   .int {
-    width: 500px;
+    width: 600px;
     margin: 0;
   }
   .fc {
@@ -671,6 +682,7 @@ textarea.form-control {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: -3vh;
   }
 }
 /*# sourceMappingURL=main.css.map */

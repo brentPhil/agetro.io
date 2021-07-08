@@ -398,6 +398,9 @@ textarea.form-control {
     .what{
       width: 400px;
     }
+    .int{
+        margin-right: 2em;
+    }
     .illus{
       order: 2;
       margin: 0 2em;
@@ -442,6 +445,10 @@ textarea.form-control {
         width: 250px;
       }
     }
+    .footer{
+        display: flex;
+        margin-bottom: 6vh;
+    }
   }
   @media only screen and (min-width: 1000px) {
     .body{
@@ -455,7 +462,9 @@ textarea.form-control {
     }
     .bgl{
         img{
-            width: 400px;
+            width: 500px;
+            position: relative;
+            top: -1.5em;
         }
     }
     .illus{
@@ -466,7 +475,7 @@ textarea.form-control {
         }
     }
     .int{
-        width: 500px;
+        width: 600px;
         margin: 0;
     }
     .fc{
@@ -474,5 +483,6 @@ textarea.form-control {
     }
     .footer{
         display: flex;
+        margin-bottom: -3vh;
     }
   }

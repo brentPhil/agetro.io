@@ -1,9 +1,6 @@
         const menuBtn = 
             document.querySelector(".menu-btn");
 
-        const bodyCon = 
-            document.querySelector(".body_container");
-
         const menu = 
             document.querySelector(".menu");
   
@@ -22,7 +19,6 @@
                 menuBtn.classList.add("close");
                 menu.classList.add("show");
                 menuNav.classList.add("show");
-                bodyCon.classList.add("show");
                 navItems.forEach((item) =>
                     item.classList.add("show"));
                 navItems.forEach((item) =>
@@ -32,7 +28,6 @@
                 menuBtn.classList.remove("close");
                 menu.classList.remove("show");
                 menuNav.classList.remove("show");
-                bodyCon.classList.remove("show");
                 navItems.forEach((item) =>
                     item.classList.add("close"));
                 showMenu = false;

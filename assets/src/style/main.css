@@ -330,13 +330,9 @@ header ul a:hover {
   display: flex;
 }
 
-.icon {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-}
-
 .icon img {
+  position: relative;
+  top: .2em;
   width: 40px;
   margin-right: 1em;
 }
@@ -385,14 +381,13 @@ header ul, .what h4, .work h4, .about h4 {
 }
 
 .illus {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  margin: 2em 0;
+  width: 90%;
+  text-align: center;
 }
 
 .illus img {
-  width: 40vw;
+  margin: 2em 0;
+  width: 300px;
 }
 
 .resume h5 {
@@ -582,15 +577,24 @@ textarea.form-control {
   .int {
     margin-right: 2em;
   }
+  .disc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .illus {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin: 0 2em;
-    float: right;
+    margin: 0 1em;
   }
   .illus img {
-    width: 220px;
+    width: 200px;
+  }
+  .about {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -617,33 +621,20 @@ textarea.form-control {
         -ms-flex-order: 1;
             order: 1;
   }
-  .disc {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .disc {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   .what {
     width: 500px;
-  }
-  .illus {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 0 1.5em;
-  }
-  .illus img {
-    width: 250px;
   }
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 6vh;
+  }
+  .illus {
+    margin: 0 2em;
+  }
+  .illus img {
+    width: 250px;
   }
 }
 
@@ -662,15 +653,6 @@ textarea.form-control {
     position: relative;
     top: -1.5em;
   }
-  .illus {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 0 1.5em;
-  }
-  .illus img {
-    width: 300px;
-  }
   .int {
     width: 600px;
     margin: 0;
@@ -683,6 +665,9 @@ textarea.form-control {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: -3vh;
+  }
+  .illus img {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */

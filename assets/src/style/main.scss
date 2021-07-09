@@ -185,14 +185,12 @@ header{
       display: flex;  
     }
 }
-.icon{
-    display: grid;
-    place-content: center;
-        img{
+.icon img{
+        position: relative;
+        top: .2em;
         width: 40px;
         margin-right: 1em;
     }
-}
 .what, .about, .form{
     margin-right: 1.2em;
 }
@@ -236,11 +234,11 @@ header{
     width: 100%;
 }
 .illus{
-    display: grid;
-    place-content: center;
-    margin: 2em 0;
+    width: 90%;
+    text-align: center;
     img{
-      width: 40vw;
+      margin: 2em 0;
+      width: 300px;
   }
   }
 .resume{
@@ -401,13 +399,18 @@ textarea.form-control {
     .int{
         margin-right: 2em;
     }
+    .disc{
+        display: flex;
+    }
     .illus{
-      order: 2;
-      margin: 0 2em;
-      float: right;
-      img{
-        width: 220px;
-      }
+        order: 2;
+        margin: 0 1em;
+        img{
+            width: 200px;
+        }
+    }
+    .about{
+        order: 1;
     }
   }
 
@@ -429,26 +432,19 @@ textarea.form-control {
     q{
         order: 1;
     }
-    .disc{
-      order: 1;
-    }
-    .disc{
-      order: 1;
-    }
     .what{
         width: 500px;
       }
-    .illus{
-      order: 2;
-      margin: 0 1.5em;
-      img{
-        width: 250px;
-      }
-    }
     .footer{
         display: flex;
         margin-bottom: 6vh;
     }
+    .illus{ 
+        margin: 0 2em;
+        img{
+            width: 250px;}
+    }
+    
   }
   @media only screen and (min-width: 1000px) {
     .body{
@@ -467,13 +463,6 @@ textarea.form-control {
             top: -1.5em;
         }
     }
-    .illus{
-        order: 2;
-        margin: 0 1.5em;
-        img{
-          width: 300px;
-        }
-    }
     .int{
         width: 600px;
         margin: 0;
@@ -484,5 +473,8 @@ textarea.form-control {
     .footer{
         display: flex;
         margin-bottom: -3vh;
+    }
+    .illus img{
+        width: 300px;
     }
   }

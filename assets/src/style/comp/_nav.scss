@@ -65,9 +65,11 @@
     }
 }
 .menu.show {
-    opacity: 0.9;
+    opacity: 0.8;
     pointer-events:all;
+    overflow: hidden;
 }
+
 .nav-item{
     position: relative;
     opacity: 0;

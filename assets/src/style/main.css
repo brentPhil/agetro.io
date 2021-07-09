@@ -85,8 +85,9 @@
 }
 
 .menu.show {
-  opacity: 0.9;
+  opacity: 0.8;
   pointer-events: all;
+  overflow: hidden;
 }
 
 .nav-item {
@@ -162,7 +163,7 @@ body {
 
 .nav_container {
   width: 100%;
-  padding: .5em 0 4em 0;
+  padding: .5em 0 3em 0;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, black), to(#000f1a00));
   background-image: linear-gradient(to bottom, black 50%, #000f1a00 100%);
   position: fixed;
@@ -232,6 +233,13 @@ header ul a:hover {
 .body_container {
   height: auto;
   padding: 1em 0;
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.body_container.show {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 
 .headline {
@@ -346,7 +354,7 @@ header ul a:hover {
 }
 
 #work, #about, #contact {
-  padding-top: 5em;
+  padding-top: 80px;
 }
 
 header ul, .what h4, .work h4, .about h4 {
@@ -394,7 +402,7 @@ header ul, .what h4, .work h4, .about h4 {
 }
 
 .illus img {
-  margin: 2em 0;
+  margin-bottom: 2em;
   width: 300px;
 }
 
@@ -427,7 +435,7 @@ header ul, .what h4, .work h4, .about h4 {
 
 .footer {
   width: 100%;
-  margin-bottom: 4vh;
+  margin-bottom: 2.5vh;
 }
 
 .footer .int {

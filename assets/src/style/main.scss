@@ -44,7 +44,7 @@ body{
 // ---------------------------------nav_container---------------------------
 .nav_container{
     width: 100%;
-    padding: .5em 0 4em 0;
+    padding: .5em 0 3em 0;
     background-image:linear-gradient( to bottom
     ,map-get($colortype, dark ) 50%,#000f1a00 100%);
     position: fixed;
@@ -101,6 +101,10 @@ header{
 .body_container{
     height: auto;
     padding: 1em 0;
+    transition: .8s ease-in-out;
+}
+.body_container.show{
+    filter: blur(4px);
 }
 .headline{
     padding: 30vh 0;
@@ -197,7 +201,7 @@ header{
     margin-right: 1.2em;
 }
 #work, #about, #contact{
-    padding-top: 5em;
+    padding-top: 80px;
 }
 // -------------------------------------------------------------------
 %text {
@@ -242,8 +246,8 @@ header{
     width: 90%;
     text-align: center;
     img{
-      margin: 2em 0;
-      width: 300px;
+    margin-bottom: 2em;
+    width: 300px;
   }
   }
 .resume{
@@ -275,7 +279,7 @@ header{
 // ---------------------------------footer---------------------------
 .footer{
     width: 100%;
-    margin-bottom: 4vh;
+    margin-bottom: 2.5vh;
     .int{
         margin-bottom: 1em;
     }

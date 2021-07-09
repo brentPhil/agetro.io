@@ -130,6 +130,10 @@
           transition-delay: 0.4s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -231,7 +235,7 @@ header ul a:hover {
 }
 
 .headline {
-  padding: 35vh 0;
+  padding: 30vh 0;
 }
 
 .body {
@@ -339,6 +343,10 @@ header ul a:hover {
 
 .what, .about, .form {
   margin-right: 1.2em;
+}
+
+#work, #about, #contact {
+  padding-top: 5em;
 }
 
 header ul, .what h4, .work h4, .about h4 {

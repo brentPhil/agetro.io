@@ -13,7 +13,9 @@ $colortype: (
 @import url('http://fonts.cdnfonts.com/css/share-techmono-2');
 @import '../style/comp/nav';
 
-
+  html{
+    scroll-behavior: smooth;
+  }
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -101,7 +103,7 @@ header{
     padding: 1em 0;
 }
 .headline{
-    padding: 35vh 0;
+    padding: 30vh 0;
 }
 
 .body{
@@ -193,6 +195,9 @@ header{
     }
 .what, .about, .form{
     margin-right: 1.2em;
+}
+#work, #about, #contact{
+    padding-top: 5em;
 }
 // -------------------------------------------------------------------
 %text {

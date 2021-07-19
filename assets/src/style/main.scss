@@ -82,8 +82,11 @@ header{
 }
 //-------------------------------------------body---------------------------------------
 .bgl{
+    order: 2;
     display: none;
 }
+.q{order: 1;}
+
 .year{
     position: fixed;
     top: 80vh;
@@ -136,7 +139,6 @@ header{
         text-decoration: none;
         color: map-get($colortype, color2);
         transition: .5s ease;
-        width: 100px;
     }
     a:hover{
         color: map-get($colortype, accent);
@@ -144,6 +146,7 @@ header{
 }
 .quote{
     width: 90%;
+    max-width: 500px;
 }
 .line{
     width: 100%;
@@ -219,7 +222,6 @@ header{
 .work{
     padding: 1em 0;
     border: solid 1px map-get($colortype, line);
-    width: 90%;
     h4{
         margin: 0 1em;
         @extend %text;
@@ -241,15 +243,6 @@ header{
 // ---------------------------------about_me---------------------------
 .about_container{
     width: 100%;
-}
-.about, .illus img{
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease-in-out;
-}
-.about, .illus img.fade-in{
-    opacity: 1;
-    transform: translateY(0);
 }
 .illus{
     width: 90%;
@@ -336,7 +329,6 @@ header{
 		height: 2px;
 		display: block;
 		position: relative;
-		width: 95%;
 		left: 0;
         top: -2px;
 		transform: scaleX(0);
@@ -352,7 +344,7 @@ header{
     color: white;
 	border-bottom: solid map-get($colortype , line ) 2px;
 	display: block;
-	width: 95%;
+	width: 100%;
     padding: .2em 0;
 	font-size: 1.1rem;
 	background: none;
@@ -406,11 +398,6 @@ textarea.form-control {
     html{
         font-size: 18px;
       }
-      
-    .headline{
-        display: flex;
-        justify-content: space-between;
-    }
     .what{
       width: 400px;
     }
@@ -421,14 +408,10 @@ textarea.form-control {
         display: flex;
     }
     .illus{
-        order: 2;
-        margin: 0 1em;
+        margin-right: 2em;
         img{
             width: 200px;
         }
-    }
-    .about{
-        order: 1;
     }
   }
 
@@ -440,15 +423,14 @@ textarea.form-control {
     .about_container{
       display: flex;
     }
+    .headline{
+        display: flex;
+    }
     .bgl{
-        order: 2;
         display: block;
         img{
             width: 300px;
         }
-    }
-    q{
-        order: 1;
     }
     .what{
         width: 500px;
@@ -458,8 +440,8 @@ textarea.form-control {
         margin-bottom: 6vh;
     }
     .illus{ 
-        margin: 0 2em;
-        img{
+        margin-right: 2em;
+      img{
             width: 250px;}
     }
     
@@ -476,9 +458,8 @@ textarea.form-control {
     }
     .bgl{
         img{
-            width: 500px;
+            width: 400px;
             position: relative;
-            top: -1.5em;
         }
     }
     .int{

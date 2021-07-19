@@ -210,7 +210,16 @@ header ul a:hover {
 }
 
 .bgl {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   display: none;
+}
+
+.q {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .year {
@@ -279,7 +288,6 @@ header ul a:hover {
   color: #0BBF8C;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  width: 100px;
 }
 
 .body a:hover {
@@ -288,6 +296,7 @@ header ul a:hover {
 
 .quote {
   width: 90%;
+  max-width: 500px;
 }
 
 .line {
@@ -371,7 +380,6 @@ header ul, .what h4, .work h4, .about h4 {
 .work {
   padding: 1em 0;
   border: solid 1px #001E16;
-  width: 90%;
 }
 
 .work h4 {
@@ -393,20 +401,6 @@ header ul, .what h4, .work h4, .about h4 {
 
 .about_container {
   width: 100%;
-}
-
-.about, .illus img {
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.about, .illus img.fade-in {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .illus {
@@ -506,7 +500,6 @@ header ul, .what h4, .work h4, .about h4 {
   height: 2px;
   display: block;
   position: relative;
-  width: 95%;
   left: 0;
   top: -2px;
   -webkit-transform: scaleX(0);
@@ -525,7 +518,7 @@ header ul, .what h4, .work h4, .about h4 {
   color: white;
   border-bottom: solid #001E16 2px;
   display: block;
-  width: 95%;
+  width: 100%;
   padding: .2em 0;
   font-size: 1.1rem;
   background: none;
@@ -592,14 +585,6 @@ textarea.form-control {
   html {
     font-size: 18px;
   }
-  .headline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .what {
     width: 400px;
   }
@@ -612,18 +597,10 @@ textarea.form-control {
     display: flex;
   }
   .illus {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 0 1em;
+    margin-right: 2em;
   }
   .illus img {
     width: 200px;
-  }
-  .about {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -636,19 +613,16 @@ textarea.form-control {
     display: -ms-flexbox;
     display: flex;
   }
+  .headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .bgl {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     display: block;
   }
   .bgl img {
     width: 300px;
-  }
-  q {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .what {
     width: 500px;
@@ -660,7 +634,7 @@ textarea.form-control {
     margin-bottom: 6vh;
   }
   .illus {
-    margin: 0 2em;
+    margin-right: 2em;
   }
   .illus img {
     width: 250px;
@@ -678,9 +652,8 @@ textarea.form-control {
     padding: 31vh 0;
   }
   .bgl img {
-    width: 500px;
+    width: 400px;
     position: relative;
-    top: -1.5em;
   }
   .int {
     width: 600px;

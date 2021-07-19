@@ -242,15 +242,15 @@ header{
 .about_container{
     width: 100%;
 }
-.about, .illus img{
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease-in-out;
-}
-.about, .illus img.fade-in{
-    opacity: 1;
-    transform: translateY(0);
-}
+// .about, .illus img{
+//     opacity: 0;
+//     transform: translateY(50px);
+//     transition: all 1s ease-in-out;
+// }
+// .about, .illus img.fade-in{
+//     opacity: 1;
+//     transform: translateY(0);
+// }
 .illus{
     width: 90%;
     text-align: center;

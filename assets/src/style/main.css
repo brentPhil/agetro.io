@@ -395,20 +395,6 @@ header ul, .what h4, .work h4, .about h4 {
   width: 100%;
 }
 
-.about, .illus img {
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.about, .illus img.fade-in {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .illus {
   width: 90%;
   text-align: center;

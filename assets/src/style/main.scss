@@ -147,9 +147,9 @@ header{
 }
 .line{
     width: 100%;
-    border-left: solid map-get($colortype, line) 1px;
+    // border-left: solid map-get($colortype, line) 1px;
     display: grid;
-    padding: 1em 0 1em 1em;
+    padding: 1em 0 1em 0;
 
 }
 

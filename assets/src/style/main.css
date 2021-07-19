@@ -292,10 +292,9 @@ header ul a:hover {
 
 .line {
   width: 100%;
-  border-left: solid #001E16 1px;
   display: -ms-grid;
   display: grid;
-  padding: 1em 0 1em 1em;
+  padding: 1em 0 1em 0;
 }
 
 .body_content {

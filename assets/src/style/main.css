@@ -246,11 +246,6 @@ header ul a:hover {
   transition: .8s ease-in-out;
 }
 
-.body_container.show {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-}
-
 .headline {
   padding: 30vh 0;
 }
@@ -261,13 +256,13 @@ header ul a:hover {
 }
 
 .body h3 {
-  font-size: 1.3em;
+  font-size: 1em;
   margin: 0;
 }
 
 .body h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .body h4 {
@@ -327,7 +322,7 @@ header ul a:hover {
   -ms-grid-rows: ()[auto];
       grid-template-rows: repeat(auto);
   grid-gap: 1em;
-  margin: 1em 0;
+  margin-top: 3em;
 }
 
 .what h2 {
@@ -352,9 +347,9 @@ header ul a:hover {
 
 .icon img {
   position: relative;
-  top: .2em;
-  width: 40px;
-  margin-right: 1em;
+  top: .5em;
+  width: 2.4em;
+  margin-right: 1.5em;
 }
 
 .what, .about, .form {
@@ -365,7 +360,7 @@ header ul a:hover {
   padding-top: 80px;
 }
 
-header ul, .what h4, .work h4, .about h4 {
+header ul, .what h4, .work h4, .about h3 {
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -399,10 +394,6 @@ header ul, .what h4, .work h4, .about h4 {
   font-size: 1rem;
 }
 
-.about_container {
-  width: 100%;
-}
-
 .illus {
   width: 90%;
   text-align: center;
@@ -430,7 +421,7 @@ header ul, .what h4, .work h4, .about h4 {
       grid-template-rows: repeat(auto);
 }
 
-.about h4 {
+.about h3 {
   margin-bottom: .5em;
   font-size: 1.5rem;
   font-weight: bold;
@@ -646,7 +637,7 @@ textarea.form-control {
     width: 75%;
   }
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
   .headline {
     padding: 31vh 0;
@@ -660,7 +651,7 @@ textarea.form-control {
     margin: 0;
   }
   .fc {
-    margin: 0 0 0 1em;
+    margin: 0 0 0 3em;
   }
   .footer {
     display: -webkit-box;

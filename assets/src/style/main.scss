@@ -123,7 +123,7 @@ header{
     }
     h4{
         margin: 0;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
         color: map-get($colortype, color1);
         font-weight: lighter;
         line-height: 1.5em;
@@ -144,6 +144,7 @@ header{
 .quote{
     width: 90%;
     max-width: 500px;
+    margin: .5em 0;
 }
 .line{
     width: 100%;
@@ -154,7 +155,6 @@ header{
 }
 
 .body_content{
-    display: none;
     display: grid;
     grid-template-rows: repeat(auto);
     grid-gap: 4em;
@@ -168,14 +168,18 @@ header{
 }
 
 // ---------------------------------what i do---------------------------
-
+.icons span{
+    max-width: 360px;
+    margin: 1em 0;
+}
 .what{
     display: grid;
     grid-template-rows: repeat(auto);
     grid-gap: 1em;
-    margin-top: 3em;
     h2{
         color: white;
+        font-weight: bolder;
+        font-size: 26px;
     }
     h4{
         margin: 0;
@@ -189,15 +193,18 @@ header{
     }
     span{
       display: flex;  
+      border: solid 1px map-get($colortype, line);
+      padding: 1.2em;
     }
 }
+
 .icon img{
         position: relative;
         top: .5em;
         width: 2.4em;
         margin-right: 1.5em;
     }
-.what, .about, .form{
+.about, .form{
     margin-right: 1.2em;
 }
 #work, #about, #contact{
@@ -205,14 +212,13 @@ header{
 }
 // -------------------------------------------------------------------
 %text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 %ltext{
-
     font-weight: lighter;
     line-height: 1.5em;
-    font-size: .8rem;
+    font-size: .7em;
     color: map-get($colortype, color1);
 }
 // ---------------------------------my_work---------------------------
@@ -302,6 +308,8 @@ header{
     }
     form{
         margin: .5em 0;
+        border: solid 1px map-get($colortype, line);
+        padding: 1.5em 1em ;
     }
 }
 
@@ -386,14 +394,37 @@ textarea.form-control {
 }
 
   @media only screen and (min-width: 600px) {
-    .about_container{
-      display: flex;
-    }
     html{
         font-size: 18px;
       }
     .what{
-      width: 400px;
+        width: 100%;
+        text-align: center;
+        h2{
+            margin: 2em 0;
+        }
+        span{
+            display: inline;
+        }
+    }
+    .icon img{
+        top: 0;
+        width: 2.4em;
+        margin: 0;
+    }
+    .icons{
+        display: flex;
+        margin-top: 1em;
+        justify-content: space-between;
+
+        span{
+            text-align: left;
+            margin-right: 1em;
+            width: 20vw;
+        }
+        .tr{
+            margin-right: 0;
+        }
     }
     .int{
         margin-right: 2em;
@@ -417,8 +448,13 @@ textarea.form-control {
     .about_container{
       display: flex;
     }
+    .q{
+        display: grid;
+        align-content: center;
+    }
     .headline{
         display: flex;
+        justify-content: space-between;
     }
     .bgl{
         display: block;
@@ -426,9 +462,7 @@ textarea.form-control {
             width: 300px;
         }
     }
-    .what{
-        width: 500px;
-      }
+    
     .footer{
         display: flex;
         margin-bottom: 6vh;
@@ -450,9 +484,12 @@ textarea.form-control {
     .headline{
         padding: 31vh 0;
     }
+    .icons span{
+        max-width: 250px;
+    }
     .bgl{
         img{
-            width: 400px;
+            width: 35vw;
             position: relative;
         }
     }

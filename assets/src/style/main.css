@@ -267,7 +267,7 @@ header ul a:hover {
 
 .body h4 {
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   color: #CCCCC3;
   font-weight: lighter;
   line-height: 1.5em;
@@ -292,6 +292,7 @@ header ul a:hover {
 .quote {
   width: 90%;
   max-width: 500px;
+  margin: .5em 0;
 }
 
 .line {
@@ -302,7 +303,6 @@ header ul a:hover {
 }
 
 .body_content {
-  display: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: ()[auto];
@@ -316,17 +316,23 @@ header ul a:hover {
   font-size: 1.1em;
 }
 
+.icons span {
+  max-width: 360px;
+  margin: 1em 0;
+}
+
 .what {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: ()[auto];
       grid-template-rows: repeat(auto);
   grid-gap: 1em;
-  margin-top: 3em;
 }
 
 .what h2 {
   color: white;
+  font-weight: bolder;
+  font-size: 26px;
 }
 
 .what h4 {
@@ -343,6 +349,8 @@ header ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: solid 1px #001E16;
+  padding: 1.2em;
 }
 
 .icon img {
@@ -352,7 +360,7 @@ header ul a:hover {
   margin-right: 1.5em;
 }
 
-.what, .about, .form {
+.about, .form {
   margin-right: 1.2em;
 }
 
@@ -361,14 +369,14 @@ header ul a:hover {
 }
 
 header ul, .what h4, .work h4, .about h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .what h5, .work h5, .about h5 {
   font-weight: lighter;
   line-height: 1.5em;
-  font-size: .8rem;
+  font-size: .7em;
   color: #CCCCC3;
 }
 
@@ -466,6 +474,8 @@ header ul, .what h4, .work h4, .about h3 {
 
 .footer form {
   margin: .5em 0;
+  border: solid 1px #001E16;
+  padding: 1.5em 1em;
 }
 
 .form-group {
@@ -568,16 +578,40 @@ textarea.form-control {
 }
 
 @media only screen and (min-width: 600px) {
-  .about_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   html {
     font-size: 18px;
   }
   .what {
-    width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  .what h2 {
+    margin: 2em 0;
+  }
+  .what span {
+    display: inline;
+  }
+  .icon img {
+    top: 0;
+    width: 2.4em;
+    margin: 0;
+  }
+  .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .icons span {
+    text-align: left;
+    margin-right: 1em;
+    width: 20vw;
+  }
+  .icons .tr {
+    margin-right: 0;
   }
   .int {
     margin-right: 2em;
@@ -604,19 +638,25 @@ textarea.form-control {
     display: -ms-flexbox;
     display: flex;
   }
+  .q {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
   .headline {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .bgl {
     display: block;
   }
   .bgl img {
     width: 300px;
-  }
-  .what {
-    width: 500px;
   }
   .footer {
     display: -webkit-box;
@@ -642,8 +682,11 @@ textarea.form-control {
   .headline {
     padding: 31vh 0;
   }
+  .icons span {
+    max-width: 250px;
+  }
   .bgl img {
-    width: 400px;
+    width: 35vw;
     position: relative;
   }
   .int {

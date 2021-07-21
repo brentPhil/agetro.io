@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="65.211" viewBox="0 0 16 65.211">
-  <g id="Group_286" data-name="Group 286" transform="translate(-0.615 1.618)">
-    <text id="_2021" data-name="2021" transform="translate(13.615 35.382) rotate(-90)" fill="#e9e5e5" font-size="13" font-family="Verdana" letter-spacing="0.1em"><tspan x="0" y="0">2021</tspan></text>
-    <line id="Line_13" data-name="Line 13" y2="22.057" transform="translate(8.615 41.537)" fill="none" stroke="#0ff2b2" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="70" viewBox="0 0 19 70">
+  <g id="Group_327" data-name="Group 327" transform="translate(5.442 -20.522)">
+    <text id="_2021" data-name="2021" transform="translate(9.558 51.522) rotate(-90)" fill="#e9e5e5" font-size="14" font-family="SegoeUI-Light, Segoe UI" font-weight="300" letter-spacing="0.1em"><tspan x="0" y="0">2021</tspan></text>
+    <path id="Path_416" data-name="Path 416" d="M0,0V31.959" transform="translate(4.644 58.563)" fill="none" stroke="#0ff2b2" stroke-width="1"/>
   </g>
 </svg>

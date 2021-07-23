@@ -1,7 +1,6 @@
 .menu-btn {
     cursor: pointer;
     transition: all 0.5s ease-out;
-    margin-top: 10px;
 }
 .menu-btn:hover .btn-line{
     background: map-get($colortype, accent );
@@ -100,4 +99,32 @@
 
 .nav-item:nth-child(4) {
     transition-delay: 0.4s;
+}
+
+#path{
+    stroke-dasharray: 11;
+    stroke-dashoffset: 0;
+}
+
+.test #path{
+    animation: clipanim .5s linear forwards;
+}
+
+@keyframes clipanim{
+    from{
+        stroke-dashoffset: 11;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.link span {
+    position: absolute;
+    opacity: 0;
+}
+.link:hover span {
+    opacity: 1;
+    position:fixed;
+    overflow:hidden;
 }

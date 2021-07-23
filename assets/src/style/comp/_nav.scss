@@ -119,12 +119,3 @@
     }
 }
 
-.link span {
-    position: absolute;
-    opacity: 0;
-}
-.link:hover span {
-    opacity: 1;
-    position:fixed;
-    overflow:hidden;
-}

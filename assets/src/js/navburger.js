@@ -45,11 +45,27 @@ function copyToClipboard(element) {
   } );
 
   
-var tooltipSpan = document.getElementById('tooltip-span');
+// var tooltipSpan = document.getElementById('tooltip-span');
 
-window.onmousemove = function (e) {
-    var x = e.clientX,
-        y = e.clientY;
-    tooltipSpan.style.top = (y + 20) + 'px';
-    tooltipSpan.style.left = (x + 20) + 'px';
-};
+// window.onmousemove = function (e) {
+//     var x = e.clientX,
+//         y = e.clientY;
+//     tooltipSpan.style.top = (y + 20) + 'px';
+//     tooltipSpan.style.left = (x + 20) + 'px';
+// };
+
+const cursor = document.querySelector('.epiccursor');
+const cursor1 = document.querySelector('.epiccursor1');
+
+document.addEventListener('mousemove', e =>{
+  cursor.setAttribute("style", "top:"+(e.pageY - 11)+"px; left: "+(e.pageX - 11)+"px;")
+  cursor1.setAttribute("style", "top:"+(e.pageY - 17)+"px; left: "+(e.pageX - 17)+"px;")
+});
+
+document.addEventListener('click', () =>{
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500)
+} );

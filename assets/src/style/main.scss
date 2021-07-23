@@ -13,6 +13,72 @@ $colortype: (
 @import url('http://fonts.cdnfonts.com/css/share-techmono-2');
 @import '../style/comp/nav';
 
+.epiccursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #107369;
+    position: absolute;
+    z-index: 5;
+    opacity: .9;
+    pointer-events: none;
+    animation: cursorAnim .5s infinite alternate;
+} 
+
+.epiccursor1{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 8px solid #367570;
+    position: absolute;
+    pointer-events: none;
+    opacity: .3;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+}
+
+.expand{
+    animation: cursorAnim2 .5s forwards;
+    opacity: .5;
+    
+}
+.grow{
+    animation: cursorAnim3 .5s infinite alternate;
+    border: 1px solid gold;
+}
+
+@keyframes cursorAnim{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.9);
+    }
+}
+@keyframes cursorAnim3{
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes cursorAnim2{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
   html{
     scroll-behavior: smooth;
   }
@@ -39,6 +105,7 @@ body{
     background-color: map-get($colortype, dark );
     font-family: 'Be Vietnam', sans-serif;
     color: map-get($colortype, color2 ); 
+    cursor: none;
 }
 
 // ---------------------------------nav_container---------------------------

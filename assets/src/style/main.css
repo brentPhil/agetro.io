@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Rationale&display=swap");
 @import url("http://fonts.cdnfonts.com/css/share-techmono-2");
 .menu-btn {
-  cursor: pointer;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -159,45 +158,40 @@
 }
 
 .epiccursor {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 2px solid #107369;
+  border: 1px solid #0BBF8C;
   position: absolute;
   z-index: 5;
   opacity: .9;
   pointer-events: none;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
-}
-
-.epiccursor1 {
-  content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 8px solid #367570;
-  position: absolute;
-  pointer-events: none;
-  opacity: .3;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
+}
+
+.cursormain {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .expand {
   -webkit-animation: cursorAnim2 .5s forwards;
           animation: cursorAnim2 .5s forwards;
-  opacity: .5;
+  opacity: .3;
 }
 
 .grow {
-  -webkit-animation: cursorAnim3 .5s infinite alternate;
-          animation: cursorAnim3 .5s infinite alternate;
-  border: 1px solid gold;
+  -webkit-animation: cursorAnim .5s infinite alternate;
+          animation: cursorAnim .5s infinite alternate;
+  border: 1px solid #0FF2B2;
 }
 
 @-webkit-keyframes cursorAnim {
@@ -206,8 +200,8 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
@@ -217,37 +211,15 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@-webkit-keyframes cursorAnim3 {
-  from {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes cursorAnim3 {
-  from {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 
 @-webkit-keyframes cursorAnim2 {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   50% {
     -webkit-transform: scale(2);
@@ -262,8 +234,8 @@
 
 @keyframes cursorAnim2 {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   50% {
     -webkit-transform: scale(2);
@@ -304,6 +276,10 @@ body {
   background-color: black;
   font-family: 'Be Vietnam', sans-serif;
   color: #0BBF8C;
+  cursor: none;
+}
+
+body a {
   cursor: none;
 }
 
@@ -517,6 +493,7 @@ header {
 }
 
 .work {
+  position: relative;
   padding: 1em 0;
   border: solid 1px #001E16;
 }
@@ -530,12 +507,29 @@ header {
   margin: 1.2em 1.4em;
 }
 
-.work a {
-  text-decoration: none;
-  color: #0BBF8C;
-  font-weight: bold;
-  margin: 0 1em;
-  font-size: 1rem;
+.overlay {
+  position: absolute;
+  font-weight: bolder;
+  color: #555555;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.work:hover .overlay {
+  opacity: .9;
 }
 
 .footer {
@@ -586,7 +580,7 @@ header {
   margin-left: 1em;
   background: none;
   color: #bbbbbb;
-  cursor: pointer;
+  cursor: none;
   border: none;
   padding: 0 1em;
   border-left: solid 1px #001E16;
@@ -660,6 +654,7 @@ header {
   font-size: 1rem;
   background: none;
   outline: none;
+  cursor: none;
 }
 
 .form-control:focus + span, .form-control:valid + span {

@@ -14,39 +14,35 @@ $colortype: (
 @import '../style/comp/nav';
 
 .epiccursor{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 2px solid #107369;
+    border: 1px solid #0BBF8C;
     position: absolute;
     z-index: 5;
     opacity: .9;
     pointer-events: none;
-    animation: cursorAnim .5s infinite alternate;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+} 
+.cursormain{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
 } 
 
-.epiccursor1{
-    content:"";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 8px solid #367570;
-    position: absolute;
-    pointer-events: none;
-    opacity: .3;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate;
-}
 
 .expand{
     animation: cursorAnim2 .5s forwards;
-    opacity: .5;
-    
+    opacity: .3;
 }
 .grow{
-    animation: cursorAnim3 .5s infinite alternate;
-    border: 1px solid gold;
+    animation: cursorAnim .5s infinite alternate;
+    border: 1px solid #0FF2B2;
 }
 
 @keyframes cursorAnim{
@@ -54,20 +50,13 @@ $colortype: (
         transform: scale(1);
     }
     to{
-        transform: scale(.9);
-    }
-}
-@keyframes cursorAnim3{
-    from{
         transform: scale(1.5);
     }
-    to{
-        transform: scale(1);
-    }
 }
+
 @keyframes cursorAnim2{
     0% {
-        transform: scale(1);
+        transform: scale(.5);
     }
     50% {
         transform: scale(2);
@@ -106,6 +95,11 @@ body{
     font-family: 'Be Vietnam', sans-serif;
     color: map-get($colortype, color2 ); 
     cursor: none;
+
+    a{
+        cursor: none;
+    }
+
 }
 
 // ---------------------------------nav_container---------------------------
@@ -288,6 +282,7 @@ header{
 }
 // ---------------------------------my_work---------------------------
 .work{
+    position: relative;
     padding: 1em 0;
     border: solid 1px map-get($colortype, line);
     h4{
@@ -299,16 +294,27 @@ header{
         margin: 1.2em 1.4em;
         @extend %ltext;
     }
-    a{
-        text-decoration: none;
-        color: map-get($colortype , color2 );
-        font-weight: bold;
-        margin: 0 1em;
-        font-size: 1rem;
-    }
-
 }
 
+.overlay{
+    position: absolute;
+    font-weight: bolder;
+    color: rgb(85, 85, 85);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: .5s ease-in-out;
+}
+
+.work:hover .overlay{
+    opacity: .9;
+}
 
 // ---------------------------------footer---------------------------
 .footer{
@@ -352,7 +358,7 @@ header{
     margin-left: 1em;
     background: none;
     color: map-get($colortype, color1 );
-    cursor: pointer;
+    cursor: none;
     border: none;
     padding: 0 1em;
     border-left: solid 1px map-get($colortype, line);
@@ -414,6 +420,7 @@ header{
 	font-size: 1rem;
 	background: none;
     outline: none;
+    cursor: none;
 	&:focus, &:valid {
 		& + span {
 			transform: translateY(-1.5em) scale(.7);

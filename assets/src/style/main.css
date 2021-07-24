@@ -131,12 +131,12 @@
 
 #path {
   stroke-dasharray: 11;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 11;
 }
 
 .test #path {
-  -webkit-animation: clipanim .5s linear forwards;
-          animation: clipanim .5s linear forwards;
+  -webkit-animation: clipanim .3s linear forwards;
+          animation: clipanim .3s linear forwards;
 }
 
 @-webkit-keyframes clipanim {
@@ -162,7 +162,7 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid #0BBF8C;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   opacity: .9;
   pointer-events: none;
@@ -177,15 +177,14 @@
   height: 6px;
   border-radius: 50%;
   background-color: white;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   pointer-events: none;
 }
 
 .expand {
-  -webkit-animation: cursorAnim2 .5s forwards;
-          animation: cursorAnim2 .5s forwards;
-  opacity: .3;
+  -webkit-animation: cursorAnim2 0.3s linear 1;
+          animation: cursorAnim2 0.3s linear 1;
 }
 
 .grow {
@@ -217,34 +216,32 @@
 }
 
 @-webkit-keyframes cursorAnim2 {
-  0% {
+  25% {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
   }
-  50% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+  75% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    opacity: 0;
   }
 }
 
 @keyframes cursorAnim2 {
-  0% {
+  25% {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
   }
-  50% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+  75% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    opacity: 0;
   }
 }
 
@@ -290,6 +287,7 @@ body a {
   background-image: linear-gradient(to bottom, black 50%, #000f1a00 100%);
   position: fixed;
   z-index: 4;
+  pointer-events: none;
 }
 
 header {
@@ -585,11 +583,13 @@ header {
   padding: 0 1em;
   border-left: solid 1px #001E16;
   background: black;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 .link:active .clipb {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-animation: cursorAnim2 0.3s linear 1;
+          animation: cursorAnim2 0.3s linear 1;
 }
 
 .con {

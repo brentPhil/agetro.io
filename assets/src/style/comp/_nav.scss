@@ -102,11 +102,11 @@
 
 #path{
     stroke-dasharray: 11;
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 11;
 }
 
 .test #path{
-    animation: clipanim .5s linear forwards;
+    animation: clipanim .3s linear forwards;
 }
 
 @keyframes clipanim{

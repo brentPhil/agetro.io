@@ -18,7 +18,7 @@ $colortype: (
     height: 30px;
     border-radius: 50%;
     border: 1px solid #0BBF8C;
-    position: absolute;
+    position: fixed;
     z-index: 5;
     opacity: .9;
     pointer-events: none;
@@ -30,15 +30,14 @@ $colortype: (
     height: 6px;
     border-radius: 50%;
     background-color: white;
-    position: absolute;
+    position: fixed;
     z-index: 5;
     pointer-events: none;
-} 
+}
 
 
 .expand{
-    animation: cursorAnim2 .5s forwards;
-    opacity: .3;
+    animation: cursorAnim2 0.3s linear 1;
 }
 .grow{
     animation: cursorAnim .5s infinite alternate;
@@ -55,16 +54,9 @@ $colortype: (
 }
 
 @keyframes cursorAnim2{
-    0% {
-        transform: scale(.5);
-    }
-    50% {
-        transform: scale(2);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+  25%  {transform: scale(.5);}
+  75%  {transform: scale(1.5);}
+  100%  {transform: scale(1);}
 }
 
 
@@ -110,6 +102,7 @@ body{
     ,map-get($colortype, dark ) 50%,#000f1a00 100%);
     position: fixed;
     z-index: 4;
+    pointer-events: none;
 }
 
 header{
@@ -363,11 +356,12 @@ header{
     padding: 0 1em;
     border-left: solid 1px map-get($colortype, line);
     background: black;
+    transition: .3s linear;
 }
 
 .link:active {
     .clipb{
-	transform: scale(0.9);
+        animation: cursorAnim2 0.3s linear 1;
     }
 }
 .con{

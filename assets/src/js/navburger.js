@@ -41,25 +41,18 @@ function copyToClipboard(element) {
   //umriss.addEventListener("webkitAnimationEnd",..... );
   path.addEventListener("animationend",()=>{
     console.log("end")
-    btn.classList.remove("test");
+    // btn.classList.remove("test");
+    setTimeout(() => {
+      btn.classList.remove("test");
+    }, 1000);
   } );
-
-  
-// var tooltipSpan = document.getElementById('tooltip-span');
-
-// window.onmousemove = function (e) {
-//     var x = e.clientX,
-//         y = e.clientY;
-//     tooltipSpan.style.top = (y + 20) + 'px';
-//     tooltipSpan.style.left = (x + 20) + 'px';
-// };
 
 const cursor = document.querySelector('.epiccursor');
 const cursor1 = document.querySelector('.cursormain');
 
 document.addEventListener('mousemove', e =>{
-  cursor.setAttribute("style", "top:"+(e.pageY - 15)+"px; left: "+(e.pageX - 15)+"px;")
-  cursor1.setAttribute("style", "top:"+(e.pageY - 2)+"px; left: "+(e.pageX - 2)+"px;")
+  cursor.setAttribute("style", "top:"+(e.clientY - 15)+"px; left: "+(e.clientX - 15)+"px;")
+  cursor1.setAttribute("style", "top:"+(e.clientY - 2)+"px; left: "+(e.clientX - 2)+"px;")
 });
 
 document.addEventListener('click', () =>{
@@ -67,7 +60,7 @@ document.addEventListener('click', () =>{
 
   setTimeout(() => {
     cursor.classList.remove("expand");
-  }, 500)
+  }, 500);
 } );
 const links = document.querySelectorAll('body a');
 links.forEach((link) => {

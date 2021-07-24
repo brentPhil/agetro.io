@@ -59,7 +59,7 @@ const cursor1 = document.querySelector('.cursormain');
 
 document.addEventListener('mousemove', e =>{
   cursor.setAttribute("style", "top:"+(e.pageY - 15)+"px; left: "+(e.pageX - 15)+"px;")
-  cursor1.setAttribute("style", "top:"+(e.pageY - 2)+"px; left: "+(e.pageX - 2)+"px;")
+  cursor1.setAttribute("style", "top:"+(e.clientY - 2)+"px; left: "+(e.clientX - 2)+"px;")
 });
 
 document.addEventListener('click', () =>{

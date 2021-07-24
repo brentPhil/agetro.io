@@ -287,7 +287,6 @@ body a {
   background-image: linear-gradient(to bottom, black 50%, #000f1a00 100%);
   position: fixed;
   z-index: 4;
-  pointer-events: none;
 }
 
 header {

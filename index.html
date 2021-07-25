@@ -8,6 +8,9 @@
     <link rel = "icon" href ="assets/svg/logo1.svg" type = "image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/src/style/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
@@ -15,7 +18,9 @@
     <div class="epiccursor">    
     </div>
     <div class="cursormain"></div>
-
+    <div class="visitSite">Visit <br> Site</div>
+    <div class="caseStudy">Case <br> Study</div>
+    <div class="addcopy"></div>
     <!-- ------------------------------header--------------------------------------------->
 <div class="nav_container">
     <header>
@@ -29,9 +34,9 @@
     <!-- ------------------------------hamburger--------------------------------------------->
 <nav class="menu">
     <ul class="menu-nav">
-        <li class="nav-item"><a href="#work" class="nav-link"><h1>.work{}</h1></a></li>
-        <li class="nav-item"><a href="#about" class="nav-link"><h1>.about{}</h1></a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link"><h1>.contact{}</h1></a></li>
+        <li class="nav-item"><a href="#work" class="nav-link sitenav"><h1>.work{}</h1></a></li>
+        <li class="nav-item"><a href="#about" class="nav-link sitenav"><h1>.about{}</h1></a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link sitenav"><h1>.contact{}</h1></a></li>
     </ul>
 </nav>
 </div>
@@ -46,31 +51,26 @@
     <!-- ------------------------------front_page--------------------------------------------->
         <div class="headline">
             <span class="bgl"><img src="assets/svg/bgd.svg" alt=""></span><br><br>
-            <span class="q"><h2><text>brent</text> .agetro_graphics{</h2>
+            <span class="q"><h2><text>brent .agetro_graphics</text>{</h2>
             <div class="quote">
                 <h4>PASSIONATE JUNIOR FRONTEND WEB DEVELOPER AND UX/UI DESIGNER</h4>
-            <h3><a href="#work">.work{}</a></h3>
+            <h3><a href="#work" class="sitenav">.work{}</a></h3>
             </div>
             <h2>}</h2></span>    
         </div>
     <!-- ------------------------------about_me--------------------------------------------->
 <div class="about_container" id="about"> 
-        <h3><text>hello</text> .world{<div class="line" id="line1">    
+        <h3><text>hello .world</text>{<div class="line" id="line1">    
             <span class="disc"> 
                 <div class="illus">
-                        <img src="assets/src/img/profile.png" alt="about_illus">
+                    <h1>I<text>'M</text> B<text>RENT</text> P<text>HILIP</text></h1>
                 </div>
                 <span class="about">
-                            <h3>I'M BRENT PHILIP</h3>
                             <h5>I am a front-end developer and UX/UI designer with a keen eye for detail and a determination to deliver the highest quality possible, With over three years of experience.<br>
-                            <br>I'm currently studying for my bachelor's degree in science in information technology here in the Philippines. The main areas of my expertise are HTML(5), CSS(3), and intermediate knowledge in javascript, PHP, and MySQL. I am motivated, enthusiastic, and well organized, with a keen eye for beautiful design, primarily based on UI/user interfaces. 
+                            <br>I'm currently studying for my bachelor's degree in science in information technology here in the Philippines. My main areas of expertise are HTML(5), CSS(3), with intermediate knowledge in javascript, PHP, and MySQL. I am motivated, enthusiastic, and well organized, with a keen eye for beautiful design, primarily based on UI/user interfaces. 
                             <br>
                             <br>
-                            <h5>Download my <a href="#">RESUME
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
-                                <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
-                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                              </svg></a></h5>
+                            <h5>Download my <a href="#" class="sitenav">resume</a></h5>
                 </span>
             </span><br>
 <!-- ------------------------------what_i_do--------------------------------------------->
@@ -120,20 +120,29 @@
 
     <!-- ------------------------------my_work--------------------------------------------->
         <div class="work_container" id="work">
-                <h3><text>my</text> .work{<div class="line">
+                <h3><text>my .work</text>{<div class="line wline">
+                    <a id="site">
                 <div class="work">
-                    <h4>CREATIVITY BOX</h4>
-                    <h5>Where I showcase all of my best projects, and designs</h5>
+                    <div>
+                    <h4>DESIGN BOX</h4>
+                    <h5>A collection of designs and front-end coding. These are a mix of branding, practice and side projects.</h5>
                     <div class="overlay">UNDER DEVELOPMENT</div>
+                    </div>
+                    <div class="argo"><img src="assets/svg/arrow.svg" alt=""></div>
                 </div>
-                <br>
+                    </a>
+                    <a href="" class="case">
                 <div class="work">
+                    <div>
                     <h4>AGETRO GRAPHIC</h4>
                     <h5>A high-performance portfolio, Responsive website 
                         created with the power of creative SVG, Greensock (GSAP)
                         & ScrollMagic animations designed for a more enriching user experience</h5>
-                    <div class="overlay">UNDER DEVELOPMENT</div>    
+                    <div class="overlay">UNDER DEVELOPMENT</div>
                 </div>
+                    <div class="argo"><img src="assets/svg/arrow.svg" alt=""></div>
+                </div>
+                    </a>
                </div>}</h3>
         </div>
 <!-- ------------------------------footer--------------------------------------------->
@@ -142,8 +151,8 @@
                   <h2>GET INTOUCH</h2>
                   <h5>for partnership, business or just saying hi: click the link below </h5>
                   <div class="con">
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=brentagetrophil@gmail.com">
-                  <p style="margin: .5em; text-decoration: underline;" id="link">brentagetrophil@gmail.com</p>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=brentagetrophil@gmail.com" class="sitenav">
+                  <p style="margin: .5em 0; text-decoration: underline;" id="link">brentagetrophil@gmail.com</p>
                   </a>
                   <button class="link" id="btn" onclick="copyToClipboard('#link')">
                     <div class="clipb">
@@ -159,7 +168,7 @@
                 </div>
                   </div>
                   <div class="fc">
-                  <h3><text>or</text> .contact{
+                  <h3><text>or .contact</text>{
                     <span class="form">
                         <form action="POST" data-netlify="true">
                             <div class="form-group">

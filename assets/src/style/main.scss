@@ -34,10 +34,45 @@ $colortype: (
     z-index: 5;
     pointer-events: none;
 }
+.addcopy{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+    transform: scale(0);
+    background-image: url('../../svg/addcopy.svg');
+}
 
+.visitSite, .caseStudy{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: map-get($colortype, color3 ); 
+    color: white;
+    position: fixed;
+    z-index: 5;
+    text-align: center;
+    display: grid;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    letter-spacing: 1px;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.shrink{
+    transform: scale(1.2);
+    opacity: 0;
+}
+.sitegrow{
+    animation: cursorAnim2 0.3s forwards;
+}
 
 .expand{
-    animation: cursorAnim2 0.3s linear 1;
+    animation: cursorAnim2 0.3s linear;
 }
 .grow{
     animation: cursorAnim .5s infinite alternate;
@@ -55,8 +90,11 @@ $colortype: (
 
 @keyframes cursorAnim2{
   25%  {transform: scale(.5);}
-  75%  {transform: scale(1.5);}
+  75%  {transform: scale(1.2);}
   100%  {transform: scale(1);}
+}
+@keyframes cursorAnim3{
+  to{transform: scale(0);}
 }
 
 
@@ -153,17 +191,19 @@ header{
     h2{
         margin: 0;
         font-size: 1.1rem;
+        font-weight: lighter;
+        color: map-get($colortype, color3);
     }
     h4{
         margin: 0;
         margin-bottom: .5em;
         color: map-get($colortype, color1);
-        font-weight: lighter;
         line-height: 1.5em;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Kanit', sans-serif;
     }
     text{
-        color: white;
+        color: map-get($colortype, color1);
     }
     a{
         text-decoration: none;
@@ -188,36 +228,44 @@ header{
 .footer{
     h3{
         font-size: 1.1em;
+        font-weight: lighter;
+        color: map-get($colortype, color3);
     }
+
 }
 
 // ---------------------------------about_me---------------------------
 .illus{
-    width: 100%;
-    text-align: center;
-    img{
-    margin-bottom: 2em;
-    width: 300px;
+    margin-bottom: .5em;
+    h1{
+        position: relative;
+        margin: 0;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        font-family: 'Kanit', sans-serif;
+        color: map-get($colortype, color2);
+        line-height: 1em;
+        text{
+            font-size: 2.2rem;
+            color: map-get($colortype , color2 );
+        }
+    }
   }
-  }
+.about{
+    max-width: 600px;
+}
 .fc{
     width: 100%;
 }
 #about{
-   
-    h3{
-        margin-bottom: .5em;
-        @extend %text;
-        font-size: 1.5rem;
-        font-weight: bold;
+    h5{
+      margin: 0;
+      font-weight: normal;
+      color: map-get($colortype , color1 );
+        a{
+            font-size: 1.2em;
+        }    
     }
-        h5{
-            margin: 0;
-            @extend %ltext;        
-            a{
-                font-size: 1.2em;
-            }    
-        }
 }
 
 // ---------------------------------what i do---------------------------
@@ -228,7 +276,8 @@ header{
         margin: 0;
         margin-bottom: .5em;
         color: map-get($colortype , color2 );
-        @extend %text;
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.5rem;
     }
     h5{
         margin: 0;
@@ -238,7 +287,6 @@ header{
 } 
 .b{
     margin: 0;
-    font-weight: lighter;
     font-size: .8em;
     color: map-get($colortype , color2 );
 }
@@ -273,19 +321,37 @@ header{
     color: map-get($colortype, color1);
 }
 // ---------------------------------my_work---------------------------
+.wline{
+    padding: 1.5em 0;
+}
 .work{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 0;
     position: relative;
-    padding: 1em 0;
-    border: solid 1px map-get($colortype, line);
+    border-bottom: solid 1px map-get($colortype, line);
     h4{
-        margin: 0 1em;
-        @extend %text;
+        margin-bottom: 1em;
         color: white;
+        font-family: 'Kanit', sans-serif;
     }
     h5{
-        margin: 1.2em 1.4em;
+        margin: 0;
         @extend %ltext;
     }
+}
+
+.argo{
+    margin-left: 2em;
+    padding-top: 5px;
+    img{
+        transform: rotate(-90deg);
+        transition: .2s ease-in-out;
+    }
+}
+
+.work:hover .argo img{
+    transform: rotate(-130deg);
 }
 
 .overlay{
@@ -320,7 +386,8 @@ header{
     }
     h2{
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-family: 'Kanit', sans-serif;
         }
         h3{
             margin: 0;
@@ -352,10 +419,13 @@ header{
     color: map-get($colortype, color1 );
     cursor: none;
     border: none;
-    padding: 0 1em;
-    border-left: solid 1px map-get($colortype, line);
+    padding: 0 1.5em;
     background: black;
     transition: .3s linear;
+}
+.clipb{
+    position: relative;
+    bottom: -2px;
 }
 
 .link:active {
@@ -367,10 +437,9 @@ header{
     max-width: 350px;
     display: flex;
     justify-content: space-between;
-    padding-left: .5em;
     margin: 0 auto;
     margin-top: 1em;
-    border: solid 1px map-get($colortype, line);
+    border-bottom: solid 1px map-get($colortype, line);
     transition: .4s ease-in-out;
 }
 
@@ -482,12 +551,10 @@ textarea.form-control {
     }
     .disc{
         display: flex;
+        justify-content: space-between;
     }
-    .illus{
-        margin-right: 2em;
-        img{
-            width: 200px;
-        }
+    .about{
+        margin-left: 2em;
     }
   }
 
@@ -520,10 +587,13 @@ textarea.form-control {
     .int h5{
         margin: 1em 1em 0 1em;
     }
-    .illus{ 
-        margin: 0 2.5em;
-      img{
-            width: 250px;}
+    .illus{
+        h1{
+            font-size: 50px;
+            text{
+                font-size: 46px;
+            }
+        }
     }
     
   }
@@ -553,7 +623,14 @@ textarea.form-control {
         display: flex;
         margin-bottom: -3vh;
     }
-    .illus img{
-        width: 300px;
+    .illus{
+        max-width: 1000px;
+        h1{
+            position: relative;
+            font-size: 70px;
+            text{
+                font-size:64px;
+            }
+        }
     }
   }

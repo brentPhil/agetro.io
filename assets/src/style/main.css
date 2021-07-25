@@ -182,9 +182,53 @@
   pointer-events: none;
 }
 
+.addcopy {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-image: url("../../svg/addcopy.svg");
+}
+
+.visitSite, .caseStudy {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #107369;
+  color: white;
+  position: fixed;
+  z-index: 5;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  letter-spacing: 1px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  pointer-events: none;
+}
+
+.shrink {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
+}
+
+.sitegrow {
+  -webkit-animation: cursorAnim2 0.3s forwards;
+          animation: cursorAnim2 0.3s forwards;
+}
+
 .expand {
-  -webkit-animation: cursorAnim2 0.3s linear 1;
-          animation: cursorAnim2 0.3s linear 1;
+  -webkit-animation: cursorAnim2 0.3s linear;
+          animation: cursorAnim2 0.3s linear;
 }
 
 .grow {
@@ -221,8 +265,8 @@
             transform: scale(0.5);
   }
   75% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
     -webkit-transform: scale(1);
@@ -236,12 +280,26 @@
             transform: scale(0.5);
   }
   75% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cursorAnim3 {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes cursorAnim3 {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -362,19 +420,21 @@ header {
 .body h2 {
   margin: 0;
   font-size: 1.1rem;
+  font-weight: lighter;
+  color: #107369;
 }
 
 .body h4 {
   margin: 0;
   margin-bottom: .5em;
   color: #bbbbbb;
-  font-weight: lighter;
   line-height: 1.5em;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Kanit', sans-serif;
 }
 
 .body text {
-  color: white;
+  color: #bbbbbb;
 }
 
 .body a {
@@ -402,30 +462,41 @@ header {
 .work_container h3,
 .footer h3 {
   font-size: 1.1em;
+  font-weight: lighter;
+  color: #107369;
 }
 
 .illus {
-  width: 100%;
-  text-align: center;
+  margin-bottom: .5em;
 }
 
-.illus img {
-  margin-bottom: 2em;
-  width: 300px;
+.illus h1 {
+  position: relative;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  font-family: 'Kanit', sans-serif;
+  color: #0BBF8C;
+  line-height: 1em;
+}
+
+.illus h1 text {
+  font-size: 2.2rem;
+  color: #0BBF8C;
+}
+
+.about {
+  max-width: 600px;
 }
 
 .fc {
   width: 100%;
 }
 
-#about h3 {
-  margin-bottom: .5em;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 #about h5 {
   margin: 0;
+  font-weight: normal;
+  color: #bbbbbb;
 }
 
 #about h5 a {
@@ -440,6 +511,8 @@ header {
   margin: 0;
   margin-bottom: .5em;
   color: #0BBF8C;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.5rem;
 }
 
 .what h5 {
@@ -448,7 +521,6 @@ header {
 
 .b {
   margin: 0;
-  font-weight: lighter;
   font-size: .8em;
   color: #0BBF8C;
 }
@@ -477,31 +549,54 @@ header {
   padding-top: 80px;
 }
 
-#about h3, .what h4, .work h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#about h5, .what h5, .work h5 {
+.what h5, .work h5 {
   font-weight: lighter;
   line-height: 1.7em;
   font-size: .8em;
   color: #bbbbbb;
 }
 
+.wline {
+  padding: 1.5em 0;
+}
+
 .work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em 0;
   position: relative;
-  padding: 1em 0;
-  border: solid 1px #001E16;
+  border-bottom: solid 1px #001E16;
 }
 
 .work h4 {
-  margin: 0 1em;
+  margin-bottom: 1em;
   color: white;
+  font-family: 'Kanit', sans-serif;
 }
 
 .work h5 {
-  margin: 1.2em 1.4em;
+  margin: 0;
+}
+
+.argo {
+  margin-left: 2em;
+  padding-top: 5px;
+}
+
+.argo img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.work:hover .argo img {
+  -webkit-transform: rotate(-130deg);
+          transform: rotate(-130deg);
 }
 
 .overlay {
@@ -543,7 +638,8 @@ header {
 
 .footer h2 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Kanit', sans-serif;
 }
 
 .footer h3 {
@@ -579,11 +675,15 @@ header {
   color: #bbbbbb;
   cursor: none;
   border: none;
-  padding: 0 1em;
-  border-left: solid 1px #001E16;
+  padding: 0 1.5em;
   background: black;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+}
+
+.clipb {
+  position: relative;
+  bottom: -2px;
 }
 
 .link:active .clipb {
@@ -599,10 +699,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: .5em;
   margin: 0 auto;
   margin-top: 1em;
-  border: solid 1px #001E16;
+  border-bottom: solid 1px #001E16;
   -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
 }
@@ -733,12 +832,12 @@ textarea.form-control {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .illus {
-    margin-right: 2em;
-  }
-  .illus img {
-    width: 200px;
+  .about {
+    margin-left: 2em;
   }
 }
 
@@ -780,11 +879,11 @@ textarea.form-control {
   .int h5 {
     margin: 1em 1em 0 1em;
   }
-  .illus {
-    margin: 0 2.5em;
+  .illus h1 {
+    font-size: 50px;
   }
-  .illus img {
-    width: 250px;
+  .illus h1 text {
+    font-size: 46px;
   }
 }
 
@@ -814,8 +913,15 @@ textarea.form-control {
     display: flex;
     margin-bottom: -3vh;
   }
-  .illus img {
-    width: 300px;
+  .illus {
+    max-width: 1000px;
+  }
+  .illus h1 {
+    position: relative;
+    font-size: 70px;
+  }
+  .illus h1 text {
+    font-size: 64px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -493,6 +493,13 @@ header {
   width: 100%;
 }
 
+#about h6 {
+  margin: 0;
+  font-size: .8rem;
+  color: #bbbbbb;
+  font-weight: lighter;
+}
+
 #about h5 {
   margin: 0;
   font-weight: normal;
@@ -553,7 +560,7 @@ header {
 .what h5, .work h5 {
   font-weight: lighter;
   line-height: 1.7em;
-  font-size: .8em;
+  font-size: 1rem;
   color: #bbbbbb;
 }
 
@@ -574,7 +581,7 @@ header {
 }
 
 .work h4 {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   color: white;
   font-family: 'Kanit', sans-serif;
 }

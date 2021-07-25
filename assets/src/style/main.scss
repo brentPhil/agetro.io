@@ -258,6 +258,12 @@ header{
     width: 100%;
 }
 #about{
+    h6{
+        margin: 0;
+        font-size: .8rem;
+        color: map-get($colortype , color1 );
+        font-weight: lighter;
+    }
     h5{
       margin: 0;
       font-weight: normal;
@@ -318,7 +324,7 @@ header{
 %ltext{
     font-weight: lighter;
     line-height: 1.7em;
-    font-size: .8em;
+    font-size: 1rem;
     color: map-get($colortype, color1);
 }
 // ---------------------------------my_work---------------------------
@@ -332,7 +338,7 @@ header{
     position: relative;
     border-bottom: solid 1px map-get($colortype, line);
     h4{
-        margin-bottom: 1em;
+        margin-bottom: .5em;
         color: white;
         font-family: 'Kanit', sans-serif;
     }

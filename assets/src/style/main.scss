@@ -287,7 +287,8 @@ header{
 } 
 .b{
     margin: 0;
-    font-size: .8em;
+    font-size: 1rem;
+    font-weight: normal;
     color: map-get($colortype , color2 );
 }
 .icons{
@@ -322,7 +323,7 @@ header{
 }
 // ---------------------------------my_work---------------------------
 .wline{
-    padding: 1.5em 0;
+    padding: 1em 0;
 }
 .work{
     display: flex;

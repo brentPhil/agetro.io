@@ -95,7 +95,6 @@ const links = document.querySelectorAll('.sitenav');
 links.forEach((link) => {
   link.addEventListener('mouseover', () =>{
     cursor.classList.add("grow");
-
   });
 
   link.addEventListener('mouseout', () =>{

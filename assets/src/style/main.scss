@@ -141,7 +141,29 @@ body{
     position: fixed;
     z-index: 4;
 }
-
+.menu1{
+    width: 400px;
+    position: relative;
+    top: -5px;
+    right: 1em;
+    display: none;
+    ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    li a{
+        text-decoration: none;
+        color: map-get($colortype, color1);
+        font-size: medium;
+        font-weight: normal
+        ;
+    }
+    li a:hover{
+        color:  map-get($colortype, accent);
+    }
+}
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -187,6 +209,7 @@ header{
     h3{
         font-size: 1em;
         margin: 0;
+        font-weight: normal;
     }
     h2{
         margin: 0;
@@ -215,7 +238,6 @@ header{
     }
 }
 .quote{
-    width: 90%;
     max-width: 500px;
     margin: .5em 0;
 }
@@ -257,7 +279,7 @@ header{
 .fc{
     width: 100%;
 }
-#about{
+.about{
     h6{
         margin: 0;
         font-size: .8rem;
@@ -287,13 +309,19 @@ header{
     }
     h5{
         margin: 0;
-        @extend %ltext;
+        color: map-get($colortype , color1 );
+        font-weight: normal;
     }
-   
+    h6{
+        margin: 0;
+        font-size: .8rem;
+        color: map-get($colortype , color1 );
+        font-weight: lighter;
+    }
 } 
 .b{
     margin: 0;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: normal;
     color: map-get($colortype , color2 );
 }
@@ -310,7 +338,7 @@ header{
 
 .icon img{
         width: 3em;
-        margin: 1.5em;
+        margin: 1em;
     }
 
 #work, #about, #contact{
@@ -540,11 +568,16 @@ textarea.form-control {
     .what{
         span{
             display: inline;
-
         }
     }
-    
+    .menu-btn{
+        display: none;
+    }
+    .menu1{
+        display: block;
+    }
     .icons{
+        margin: 0 auto;
         display: flex;
         margin-top: 1em;
         .tr{
@@ -552,8 +585,8 @@ textarea.form-control {
         }
     }
     .skillcon{
-        width: 100%;
-        margin-right: 1em;
+        width: 300px;
+        margin-right: 2em;
         text-align: center;
     }
     .disc{
@@ -576,6 +609,7 @@ textarea.form-control {
     .q{
         display: grid;
         align-content: center;
+        width: 380px;
     }
     .headline{
         display: flex;
@@ -611,15 +645,13 @@ textarea.form-control {
     html{
         font-size: 18px;
       }
-    .headline{
-        padding: 31vh 0;
-    }
     .icons span{
         max-width: 250px;
     }
     .bgl{
         img{
             width: 35vw;
+            max-width: 500px;
             position: relative;
         }
     }
@@ -639,5 +671,14 @@ textarea.form-control {
                 font-size:64px;
             }
         }
+    }
+    .w{
+        position: relative;
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .nav_container, .side{
+        max-width: 1350px;
     }
   }

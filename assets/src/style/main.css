@@ -496,6 +496,10 @@ header {
   color: #107369;
 }
 
+#about {
+  padding-top: 8em;
+}
+
 .illus {
   margin-bottom: .5em;
 }
@@ -592,8 +596,9 @@ header {
   margin: 1em;
 }
 
-#work, #about, #contact {
-  padding-top: 80px;
+#work, #contact {
+  margin-top: 10em;
+  padding-top: 5em;
 }
 
 .work h5 {

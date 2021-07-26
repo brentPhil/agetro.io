@@ -257,6 +257,9 @@ header{
 }
 
 // ---------------------------------about_me---------------------------
+#about{
+    padding-top: 8em;
+}
 .illus{
     margin-bottom: .5em;
     h1{
@@ -341,8 +344,9 @@ header{
         margin: 1em;
     }
 
-#work, #about, #contact{
-    padding-top: 80px;
+#work, #contact{
+    margin-top: 10em;
+    padding-top: 5em;
 }
 // -------------------------------------------------------------------
 %text {

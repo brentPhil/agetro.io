@@ -48,7 +48,7 @@ $colortype: (
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: map-get($colortype, color3 ); 
+    background: map-get($colortype, color2 ); 
     color: white;
     position: fixed;
     z-index: 5;

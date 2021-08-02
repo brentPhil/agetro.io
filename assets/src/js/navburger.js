@@ -49,6 +49,7 @@ function copyToClipboard(element) {
 
 const cursor = document.querySelector('.epiccursor');
 const cursor1 = document.querySelector('.cursormain');
+const site = document.querySelectorAll('#site');
 const visit = document.querySelector('.visitSite')
 const caseStudy = document.querySelector('.case');
 const caseM = document.querySelector('.caseStudy');
@@ -69,14 +70,14 @@ document.addEventListener('click', () =>{
   }, 500);
 } );
 
-site.addEventListener('mouseover', () =>{
-  cursor.classList.add('shrink');
-  visit.classList.add('sitegrow');
+$('.site').mouseover(function() {
+  $('.epiccursor').addClass('shrink');
+  $('.visitSite').addClass('sitegrow');
 });
 
-site.addEventListener('mouseout', () =>{
-  cursor.classList.remove('shrink');
-  visit.classList.remove('sitegrow');
+$('.site').mouseout(function() {
+  $('.epiccursor').removeClass('shrink');
+  $('.visitSite').removeClass('sitegrow');
 });
 
 caseStudy.addEventListener('mouseover', () =>{

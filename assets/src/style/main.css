@@ -529,12 +529,13 @@ header {
 
 .about h6 {
   margin: 0;
-  font-size: .8rem;
+  font-size: 1.2rem;
   color: #bbbbbb;
   font-weight: lighter;
 }
 
 .about h5 {
+  font-size: 1.4rem;
   margin: 0;
   font-weight: normal;
   color: #bbbbbb;

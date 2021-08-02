@@ -285,11 +285,12 @@ header{
 .about{
     h6{
         margin: 0;
-        font-size: .8rem;
+        font-size: 1.2rem;
         color: map-get($colortype , color1 );
         font-weight: lighter;
     }
     h5{
+        font-size: 1.4rem;
       margin: 0;
       font-weight: normal;
       color: map-get($colortype , color1 );

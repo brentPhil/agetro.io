@@ -166,10 +166,10 @@
   z-index: 5;
   opacity: .9;
   pointer-events: none;
-  -webkit-transition-duration: 100ms;
-          transition-duration: 100ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  top: 48%;
+  left: 48%;
 }
 
 .cursormain {
@@ -180,6 +180,8 @@
   position: fixed;
   z-index: 5;
   pointer-events: none;
+  top: 50%;
+  left: 50%;
 }
 
 .addcopy {
@@ -554,25 +556,26 @@ header {
   margin-bottom: .5em;
   color: #0BBF8C;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .what h5 {
   margin: 0;
   color: #bbbbbb;
   font-weight: normal;
+  font-size: 1rem;
 }
 
 .what h6 {
   margin: 0;
-  font-size: .8rem;
+  font-size: 1rem;
   color: #bbbbbb;
   font-weight: lighter;
 }
 
 .b {
   margin: 0;
-  font-size: .8rem;
+  font-size: 1.1rem;
   font-weight: normal;
   color: #0BBF8C;
 }
@@ -621,6 +624,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5em 0;
+  padding-right: 1em;
   position: relative;
   border-bottom: solid 1px #001E16;
 }
@@ -684,7 +688,6 @@ header {
 .footer .int {
   margin: 0 auto;
   width: 100%;
-  max-width: 500px;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -745,7 +748,6 @@ header {
 }
 
 .con {
-  max-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,7 +886,7 @@ textarea.form-control {
     margin-right: 0;
   }
   .skillcon {
-    width: 300px;
+    width: 90%;
     margin-right: 2em;
     text-align: center;
   }
@@ -937,8 +939,8 @@ textarea.form-control {
     display: flex;
     margin-bottom: 6vh;
   }
-  .int h5 {
-    margin: 1em 1em 0 1em;
+  .int {
+    padding-right: 1.5em;
   }
   .illus h1 {
     font-size: 50px;

@@ -22,8 +22,9 @@ $colortype: (
     z-index: 5;
     opacity: .9;
     pointer-events: none;
-    transition-duration: 100ms;
-    transition-timing-function: ease-out;
+    transition-duration: 200ms;
+    top: 48%;
+    left: 48%;
 } 
 .cursormain{
     width: 6px;
@@ -33,6 +34,8 @@ $colortype: (
     position: fixed;
     z-index: 5;
     pointer-events: none;
+    top: 50%;
+    left: 50%;
 }
 .addcopy{
     width: 80px;
@@ -81,10 +84,10 @@ $colortype: (
 
 @keyframes cursorAnim{
     from{
-        transform: scale(1);
+        transform:scale(1) ;
     }
     to{
-        transform: scale(1.5);
+        transform:scale(1.5);
     }
 }
 
@@ -309,23 +312,24 @@ header{
         margin-bottom: .5em;
         color: map-get($colortype , color2 );
         font-family: 'Kanit', sans-serif;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     h5{
         margin: 0;
         color: map-get($colortype , color1 );
         font-weight: normal;
+        font-size: 1rem
     }
     h6{
         margin: 0;
-        font-size: .8rem;
+        font-size: 1rem;
         color: map-get($colortype , color1 );
         font-weight: lighter;
     }
 } 
 .b{
     margin: 0;
-    font-size: .8rem;
+    font-size: 1.1rem;
     font-weight: normal;
     color: map-get($colortype , color2 );
 }
@@ -368,6 +372,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1.5em 0;
+    padding-right: 1em;
     position: relative;
     border-bottom: solid 1px map-get($colortype, line);
     h4{
@@ -420,7 +425,6 @@ header{
     .int{
         margin: 0 auto;
         width: 100%;
-        max-width: 500px;
         text-align: center;
         margin-bottom: 2em;
     }
@@ -474,7 +478,6 @@ header{
     }
 }
 .con{
-    max-width: 350px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -590,7 +593,7 @@ textarea.form-control {
         }
     }
     .skillcon{
-        width: 300px;
+        width: 90%;
         margin-right: 2em;
         text-align: center;
     }
@@ -630,8 +633,8 @@ textarea.form-control {
         display: flex;
         margin-bottom: 6vh;
     }
-    .int h5{
-        margin: 1em 1em 0 1em;
+    .int{
+        padding-right: 1.5em;
     }
     .illus{
         h1{

@@ -38,37 +38,28 @@ function copyToClipboard(element) {
   })
   
   
-  //umriss.addEventListener("webkitAnimationEnd",..... );
   path.addEventListener("animationend",()=>{
     console.log("end")
-    // btn.classList.remove("test");
+    
     setTimeout(() => {
       btn.classList.remove("test");
     }, 1000);
   } );
 
-const cursor = document.querySelector('.epiccursor');
-const cursor1 = document.querySelector('.cursormain');
-const site = document.querySelectorAll('#site');
-const visit = document.querySelector('.visitSite')
-const caseStudy = document.querySelector('.case');
-const caseM = document.querySelector('.caseStudy');
-const addcopy = document.querySelector('.addcopy');
-
-document.addEventListener('mousemove', e =>{
- cursor.setAttribute("style", "top:"+(e.clientY - 15)+"px; left: "+(e.clientX - 15)+"px;")
- cursor1.setAttribute("style", "top:"+(e.clientY - 2)+"px; left: "+(e.clientX - 2)+"px;")
- visit.setAttribute("style", "top:"+(e.clientY - 38)+"px; left: "+(e.clientX - 38)+"px;")
- caseM.setAttribute("style", "top:"+(e.clientY - 38)+"px; left: "+(e.clientX - 38)+"px;")
- addcopy.setAttribute("style", "top:"+(e.clientY - 38.5)+"px; left: "+(e.clientX - 38.5)+"px;")
+$(document).mousemove(function (e) {
+  $('.cursormain').attr("style", "top:"+(e.clientY - 2)+"px; left: "+(e.clientX - 2)+"px;")
+  $('.epiccursor').attr("style", "top:"+(e.clientY - 15)+"px; left: "+(e.clientX - 15)+"px;")
+  $('.visitSite').attr("style", "top:"+(e.clientY - 38)+"px; left: "+(e.clientX - 38)+"px;")
+  $('.caseStudy').attr("style", "top:"+(e.clientY - 38)+"px; left: "+(e.clientX - 38)+"px;")
+  $('.addcopy').attr("style", "top:"+(e.clientY - 38.5)+"px; left: "+(e.clientX - 38.5)+"px;")
 });
 
-document.addEventListener('click', () =>{
-  cursor.classList.add("expand");
-  setTimeout(() => {
-    cursor.classList.remove("expand");
+$(document).click(function () {
+  $('.epiccursor').addClass('expand');
+  setTimeout(function() { 
+  $('.epiccursor').removeClass("expand");
   }, 500);
-} );
+});
 
 $('.site').mouseover(function() {
   $('.epiccursor').addClass('shrink');
@@ -80,36 +71,30 @@ $('.site').mouseout(function() {
   $('.visitSite').removeClass('sitegrow');
 });
 
-caseStudy.addEventListener('mouseover', () =>{
-  cursor.classList.add('shrink');
-  caseM.classList.add('sitegrow');
+$('.case').mouseover(function() {
+  $('.epiccursor').addClass('shrink');
+  $('.caseStudy').addClass('sitegrow');
 });
 
-caseStudy.addEventListener('mouseout', () =>{
-  cursor.classList.remove('shrink');
-  caseM.classList.remove('sitegrow');
+$('.case').mouseout(function() {
+  $('.epiccursor').removeClass('shrink');
+  $('.caseStudy').removeClass('sitegrow');
 });
 
-
-const links = document.querySelectorAll('.sitenav');
-
-links.forEach((link) => {
-  link.addEventListener('mouseover', () =>{
-    cursor.classList.add("grow");
-  });
-
-  link.addEventListener('mouseout', () =>{
-    cursor.classList.remove("grow");
-  });
+$('.sitenav').mouseover(function() {
+  $('.epiccursor').addClass('grow');
 });
 
+$('.sitenav').mouseout(function() {
+  $('.epiccursor').removeClass('grow');
+});
 
-  btn.addEventListener('mouseover', () =>{
-    addcopy.classList.add("sitegrow");
-    cursor.classList.add('shrink');
-  });
+$('#btn').mouseover(function() {
+  $('.addcopy').addClass('sitegrow');
+  $('.epiccursor').addClass('shrink');
+});
 
-  btn.addEventListener('mouseout', () =>{
-    addcopy.classList.remove("sitegrow");
-    cursor.classList.remove('shrink');
-  });
+$('#btn').mouseout(function() {
+  $('.addcopy').removeClass('sitegrow');
+  $('.epiccursor').removeClass('shrink');
+});

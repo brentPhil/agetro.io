@@ -224,8 +224,8 @@
 }
 
 .sitegrow {
-  -webkit-animation: cursorAnim2 0.3s forwards;
-          animation: cursorAnim2 0.3s forwards;
+  -webkit-animation: cursorAnim2 1s forwards;
+          animation: cursorAnim2 1s forwards;
 }
 
 .expand {
@@ -245,8 +245,8 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -256,8 +256,8 @@
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -267,8 +267,8 @@
             transform: scale(0.5);
   }
   75% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1);
@@ -282,8 +282,8 @@
             transform: scale(0.5);
   }
   75% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1);
@@ -303,6 +303,25 @@
     -webkit-transform: scale(0);
             transform: scale(0);
   }
+}
+
+.siteprev {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  width: 250px;
+  pointer-events: none;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  opacity: 0;
+}
+
+.siteprev img {
+  width: 100%;
+}
+
+.imgprev {
+  opacity: 1;
 }
 
 html {
@@ -941,6 +960,12 @@ textarea.form-control {
   }
   .int {
     padding-right: 1.5em;
+  }
+  .int h2 {
+    text-align: left;
+  }
+  .int h5 {
+    text-align: left;
   }
   .illus h1 {
     font-size: 50px;

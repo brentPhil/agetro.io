@@ -2,7 +2,7 @@
     transition: all 0.5s ease-out;
 }
 .menu-btn:hover .btn-line{
-    background: map-get($colortype, accent );
+    background: $accent;
 }
 .menu-btn .btn-line {
     width: 30px;
@@ -13,7 +13,7 @@
 }
 .menu-btn .s{
     width: 20px;
-    background: map-get($colortype, accent );
+    background: $accent;
     float:right;
 }
 .menu-btn.close .btn-line:nth-child(1) {
@@ -26,7 +26,7 @@
 
 .menu-btn.close .btn-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
-    background: map-get($colortype, accent );
+    background: $accent;
     width: 30px;
 }
 .menu {
@@ -39,7 +39,7 @@
     opacity: 0;
     padding-right: 5%;
     transition: .7s ease-in-out;
-    background-color: map-get($colortype, dark);
+    background-color: $dark;
     pointer-events: none;
     display:grid;
     place-content: end;
@@ -48,7 +48,7 @@
 .menu-nav{
     text-align: right;
     a{text-decoration: none;
-        color: map-get($colortype, color1 );
+        color: $color1;
     }
     li{
         list-style-type: none;
@@ -59,7 +59,7 @@
         font-size: 1.5rem;
         }
     h1:hover{
-        color:  map-get($colortype, accent);
+        color:  $accent;
     }
 }
 .menu.show {

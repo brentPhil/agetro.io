@@ -161,13 +161,13 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #0BBF8C;
+  border: 1px solid #0FF2B2;
   position: fixed;
   z-index: 5;
   opacity: .9;
   pointer-events: none;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
   top: 48%;
   left: 48%;
 }
@@ -195,28 +195,6 @@
   background-image: url("../../svg/addcopy.svg");
 }
 
-.visitSite, .caseStudy {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #0BBF8C;
-  color: white;
-  position: fixed;
-  z-index: 5;
-  text-align: center;
-  display: -ms-grid;
-  display: grid;
-  font-size: 15px;
-  font-weight: bolder;
-  font-family: Arial, Helvetica, sans-serif;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  letter-spacing: 1px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  pointer-events: none;
-}
-
 .shrink {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -224,8 +202,8 @@
 }
 
 .sitegrow {
-  -webkit-animation: cursorAnim2 1s forwards;
-          animation: cursorAnim2 1s forwards;
+  -webkit-animation: cursorAnim2 .5s forwards;
+          animation: cursorAnim2 .5s forwards;
 }
 
 .expand {
@@ -263,8 +241,8 @@
 
 @-webkit-keyframes cursorAnim2 {
   25% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   75% {
     -webkit-transform: scale(1.1);
@@ -278,8 +256,8 @@
 
 @keyframes cursorAnim2 {
   25% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   75% {
     -webkit-transform: scale(1.1);
@@ -427,9 +405,33 @@ header {
 }
 
 .arrow {
-  width: 15px;
+  width: 12px;
   position: relative;
-  top: 40px;
+}
+
+.year {
+  position: relative;
+  top: -30px;
+  left: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.year h6 {
+  margin: 0;
+  color: #bbbbbb;
+  font-weight: lighter;
+  letter-spacing: .3em;
+}
+
+.year div {
+  width: 40px;
+  border-bottom: 1px solid #001E16;
+  margin-right: .5em;
+  height: 9px;
 }
 
 .side {
@@ -442,7 +444,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: fixed;
-  bottom: 5vh;
+  bottom: 7vh;
   z-index: -4;
   margin: 0 auto;
 }
@@ -948,6 +950,8 @@ textarea.form-control {
   }
   .bgl {
     display: block;
+    position: relative;
+    top: -1.5em;
   }
   .bgl img {
     width: 300px;
@@ -959,7 +963,7 @@ textarea.form-control {
     margin-bottom: 6vh;
   }
   .int {
-    padding-right: 1.5em;
+    padding-right: 1.3em;
   }
   .int h2 {
     text-align: left;

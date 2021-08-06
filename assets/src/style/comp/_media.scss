@@ -26,12 +26,8 @@
         margin-right: 2em;
         text-align: center;
     }
-    .disc{
-        display: flex;
-        justify-content: space-between;
-    }
     .about{
-        margin-left: 2em;
+        width: 100%;
     }
   }
 
@@ -60,6 +56,10 @@
             width: 300px;
         }
     }
+    .disc{
+        display: flex;
+        justify-content: space-between;
+    }
     .footer{
         display: flex;
         margin-bottom: 6vh;
@@ -74,16 +74,31 @@
         }
     }
     .illus{
+        width: 30%;
         h1{
-            font-size: 50px;
+            font-size: 3rem;
             text{
-                font-size: 46px;
+                font-size: 2.8rem;
             }
         }
     }
+    .thead{
+        width: 30%;
+        margin: .5em 0;
+    }
+    .kz{
+        padding-top: .5em;
+    }
+    .about{
+        width: 60%;
+    }
+    .tools, .wline{
+        display: flex;
+        justify-content: space-between;
+    }
     
   }
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 1100px) {
     .body{
         width: 75%;
       }
@@ -108,7 +123,6 @@
         margin-bottom: -3vh;
     }
     .illus{
-        max-width: 1000px;
         h1{
             position: relative;
             font-size: 70px;
@@ -125,5 +139,11 @@
     }
     .nav_container, .side{
         max-width: 1350px;
+    }
+    .illus{
+        width: 40%;
+    }
+    .thead{
+        width: 40%;
     }
   }

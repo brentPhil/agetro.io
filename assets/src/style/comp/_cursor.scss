@@ -73,6 +73,7 @@
     pointer-events: none;
     transition: .3s ease-out;
     opacity: 0;
+    will-change: opacity;
     img{
         width: 100%;
     }

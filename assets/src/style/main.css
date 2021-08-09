@@ -311,17 +311,14 @@ html {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #071110;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #0BBF8C;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0FF2B2;
 }
@@ -369,8 +366,8 @@ body a {
 .menu1 ul li a {
   text-decoration: none;
   color: #bbbbbb;
-  font-size: medium;
-  font-weight: normal;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 .menu1 ul li a:hover {
@@ -467,7 +464,7 @@ header {
 }
 
 .body h3 {
-  font-size: 1em;
+  font-size: 1.1rem;
   margin: 0;
   font-weight: normal;
 }
@@ -515,7 +512,7 @@ header {
 .about_container h3,
 .work_container h3,
 .footer h3 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: lighter;
   color: #107369;
 }
@@ -553,20 +550,20 @@ header {
 
 .about h6 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #bbbbbb;
   font-weight: lighter;
 }
 
 .about h5 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: normal;
   color: #bbbbbb;
 }
 
 .about h5 a {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .skill {
@@ -582,13 +579,13 @@ header {
 
 .skill span h3 {
   font-family: 'Kanit', sans-serif;
-  color: #0BBF8C;
-  font-size: 1.5rem;
-  font-weight: bol;
+  color: #bbbbbb;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .skill span h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
@@ -628,14 +625,7 @@ header {
   color: #bbbbbb;
   list-style: none;
   margin: .5em 0;
-  font-size: 1.2rem;
-}
-
-.work h5 {
-  font-weight: lighter;
-  line-height: 1.7em;
-  font-size: 1rem;
-  color: #bbbbbb;
+  font-size: 1.1rem;
 }
 
 .wline {
@@ -663,6 +653,10 @@ header {
 
 .work h5 {
   margin: 0;
+  font-weight: lighter;
+  line-height: 1.7em;
+  font-size: 1rem;
+  color: #bbbbbb;
 }
 
 .argo {
@@ -793,7 +787,7 @@ header {
 }
 
 .form-group span {
-  font-size: .7rem;
+  font-size: 0.8rem;
   color: white;
   position: absolute;
   top: .5em;
@@ -824,13 +818,14 @@ header {
 }
 
 .form-control {
+  font-family: 'Be Vietnam', sans-serif;
   border: none;
   color: white;
   border-bottom: solid #001E16 2px;
   display: block;
   width: 100%;
   padding: .3em 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background: none;
   outline: none;
   cursor: none;
@@ -851,8 +846,8 @@ header {
   border: none;
   background: none;
   color: #0BBF8C;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Be Vietnam', sans-serif;
   -webkit-transition: .5s;
   transition: .5s;
   padding: 0;
@@ -884,7 +879,7 @@ textarea.form-control {
 }
 
 .footer1 span h6 {
-  font-size: 10px;
+  font-size: 0.6rem;
   margin: 1.5em 0;
 }
 
@@ -1031,10 +1026,10 @@ textarea.form-control {
   }
   .illus h1 {
     position: relative;
-    font-size: 70px;
+    font-size: 3rem;
   }
   .illus h1 text {
-    font-size: 64px;
+    font-size: 2.8rem;
   }
   .w {
     position: relative;

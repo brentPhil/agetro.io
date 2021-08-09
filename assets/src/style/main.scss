@@ -1,38 +1,26 @@
-$line:  #001E16;
-$dark:  black;
-$color5:#204F8C;
-$color4:#071110;
-$color3:#107369;
-$color2:#0BBF8C;
-$color1:#bbbbbb;
-$accent:#0FF2B2;
-
+@import '../style/comp/fsize';
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rationale&display=swap');
 @import url('http://fonts.cdnfonts.com/css/share-techmono-2');
 @import '../style/comp/nav';
 @import '../style/comp/cursor';
 
-  html{
-    scroll-behavior: smooth;
-  }
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $color4; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $color2; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $accent;
-  }
+
+html{
+scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: $color4; 
+}
+::-webkit-scrollbar-thumb {
+background: $color2; 
+}
+::-webkit-scrollbar-thumb:hover {
+background: $accent;
+}
+
 body{
     margin: 0 auto;
     background-color: $dark;
@@ -69,8 +57,8 @@ body{
     li a{
         text-decoration: none;
         color: $color1;
-        font-size: medium;
-        font-weight: normal
+        font-size: $paragraph;
+        font-weight: lighter;
         ;
     }
     li a:hover{
@@ -138,13 +126,13 @@ header{
     width: 85%;
     margin: 0 auto;
     h3{
-        font-size: 1em;
+        font-size: $paragraph + .1rem;
         margin: 0;
         font-weight: normal;
     }
     h2{
         margin: 0;
-        font-size: 1.1rem;
+        font-size: $paragraph + .1rem;
         font-weight: lighter;
         color: $color3;
     }
@@ -153,7 +141,7 @@ header{
         margin-bottom: .5em;
         color: $color1;
         line-height: 1.5em;
-        font-size: 1.2rem;
+        font-size: $paragraph + .2rem;
         font-family: 'Kanit', sans-serif;
     }
     text{
@@ -180,7 +168,7 @@ header{
 .work_container,
 .footer{
     h3{
-        font-size: 1.1em;
+        font-size: $fcon;
         font-weight: lighter;
         color: $color3;
     }
@@ -200,12 +188,12 @@ header{
         position: relative;
         margin: 0;
         font-weight: bolder;
-        font-size: 2.5rem;
+        font-size: $heading + .5rem;
         font-family: 'Kanit', sans-serif;
         color: $color2;
         line-height: 1em;
         text{
-            font-size: 2.3rem;
+            font-size: $heading + .3rem;
             color: $color2;
         }
     }
@@ -216,17 +204,17 @@ header{
 .about{
     h6{
         margin: 0;
-        font-size: 1.2rem;
+        font-size: $paragraph;
         color: $color1;
         font-weight: lighter;
     }
     h5{
-      font-size: 1.4rem;
+      font-size: $paragraph + .2rem;
       margin: 0;
       font-weight: normal;
       color: $color1;
         a{
-            font-size: 1.2em;
+            font-size: $paragraph + .2rem;
         }    
     }
 }
@@ -239,12 +227,12 @@ header{
         margin: 1.5em 0;
         h3{
             font-family: 'Kanit', sans-serif;
-            color: $color2;
-            font-size: 1.5rem;
-            font-weight: bol;
+            color: $color1;
+            font-size: $paragraph + .2rem;
+            font-weight: bold;
         }
         h5{
-            font-size: 1.2rem;
+            font-size: $paragraph;
             font-weight: lighter;
         }
     }
@@ -263,7 +251,7 @@ header{
     h2{
         line-height: 1em;
         color: rgb(243, 243, 243);
-        font-size: 2.5rem;
+        font-size: $heading + .5rem;
         font-family: 'Kanit', sans-serif;
     }
 }
@@ -277,20 +265,9 @@ header{
             color: $color1;
             list-style: none;
             margin: .5em 0;
-            font-size: 1.2rem;
+            font-size: $paragraph + .1rem;
         }
     }
-}
-// -------------------------------------------------------------------
-%text {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-%ltext{
-    font-weight: lighter;
-    line-height: 1.7em;
-    font-size: 1rem;
-    color: $color1;
 }
 // ---------------------------------my_work---------------------------
 .wline{
@@ -310,7 +287,10 @@ header{
     }
     h5{
         margin: 0;
-        @extend %ltext;
+        font-weight: lighter;
+        line-height: 1.7em;
+        font-size: $paragraph;
+        color: $color1;
     }
 }
 
@@ -358,7 +338,7 @@ header{
     }
     h2{
         color: white;
-        font-size: 2rem;
+        font-size: $heading;
         font-family: 'Kanit', sans-serif;
         }
         h3{
@@ -368,7 +348,7 @@ header{
         color: $color1;
         font-weight: lighter;
         line-height: 1.5em;
-        font-size: 1rem;
+        font-size: $paragraph;
         margin: 1em 0;
         a{
             color: $accent;
@@ -419,7 +399,7 @@ header{
 	position: relative;
     margin: 0 0 1em 0;
 	span {
-		font-size: .7rem;
+		font-size: $paragraph - .2rem;
 		color: white;
 		position: absolute;
 		top: .5em;
@@ -444,13 +424,14 @@ header{
     margin-bottom: .5em;
 }
 .form-control {
+    font-family: 'Be Vietnam', sans-serif;
 	border: none;
     color: white;
 	border-bottom: solid $line 2px;
 	display: block;
 	width: 100%;
     padding: .3em 0;
-	font-size: 1rem;
+	font-size: $paragraph - .2rem;
 	background: none;
     outline: none;
     cursor: none;
@@ -469,8 +450,8 @@ header{
         border: none;
         background: none;
         color: $color2;
-        font-size: 1.1rem;
-        font-weight: bold;
+        font-size: $paragraph;
+        font-family: 'Be Vietnam', sans-serif;
         transition: .5s;
         padding: 0;
     }
@@ -491,7 +472,7 @@ textarea.form-control {
     font-weight: lighter;
     color: #5a5a5a;
     h6{
-        font-size: 10px;
+        font-size: $paragraph - .4rem;
         margin: 1.5em 0;
     }
 }

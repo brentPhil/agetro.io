@@ -249,20 +249,20 @@
         <h2
         data-sal-duration="1200"  
         data-sal="slide-right"
-        style="--sal-duration: 2s; --sal-delay: .5s;"
+        style="--sal-duration: 2s; --sal-delay: .3s;"
         data-sal-easing="ease-out-bounce"
         >GET INTOUCH</h2>
         <h5
         data-sal-duration="1200"  
         data-sal="slide-right"
-        style="--sal-duration: 2s; --sal-delay: 1s;"
+        style="--sal-duration: 2s; --sal-delay: .6s;"
         data-sal-easing="ease-out-bounce"
 
         >for partnership, business or just saying hi: click the link below </h5>
         <div class="con"
         data-sal-duration="1200"  
         data-sal="slide-right"
-        style="--sal-duration: 2s; --sal-delay: 1.5s;"
+        style="--sal-duration: 2s; --sal-delay: .9s;"
         data-sal-easing="ease-out-bounce"
         >
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=brent.agetro@gmail.com" class="sitenav">
@@ -281,15 +281,18 @@
         </button>
     </div>
         </div>
-        <div class="fc" 
+        <div class="fc">
+        <h3
         data-sal-duration="1200"  
-        data-sal="slide-right"
+        data-sal="fade"
         style="--sal-duration: 2s; --sal-delay: 2s;"
         data-sal-easing="ease-out-bounce"
->
-        <h3><text>or .contact</text>{
-        <span class="form">
-            <form action="POST" data-netlify="true">
+        ><text>or .contact</text>{</h3><span class="form">
+            <form action="POST" data-netlify="true" 
+            data-sal-duration="1200"  
+            data-sal="slide-up"
+            style="--sal-duration: 2s; --sal-delay: 2.5s;"
+            data-sal-easing="ease-out-bounce">
                 <div class="form-group">
                     <input type="text" name="name" class="form-control"  required>
                     <span>NAME</span>
@@ -313,7 +316,11 @@
                 <input name="send" class="send" type="submit" value=".send{}">
             </form>
         </span>
-    }</h3>  
+    <h3 
+    data-sal-duration="1200"  
+    data-sal="fade"
+    style="--sal-duration: 2s; --sal-delay: 2s;"
+    data-sal-easing="ease-out-bounce">}</h3>  
     </div>    
 </div>
         <div class="footer1">
@@ -327,7 +334,7 @@
 <script src="lib/dist/sal.js"></script>
 <script>
     sal({
-    threshold: .5,
+    threshold: .2,
     once: false,
     });
 </script>

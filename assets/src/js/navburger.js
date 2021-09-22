@@ -51,6 +51,7 @@ $(document).mousemove(function (e) {
   $('.epiccursor').attr("style", "top:"+(e.clientY - 15)+"px; left: "+(e.clientX - 15)+"px;")
   $('.addcopy').attr("style", "top:"+(e.clientY - 38.5)+"px; left: "+(e.clientX - 38.5)+"px;")
   $('.siteprev').attr("style", "top:"+ e.clientY +"px; left: "+ e.clientX +"px;")
+  $('.design-box').attr("style", "top:"+ e.clientY +"px; left: "+ e.clientX +"px;")
 });
 
 $(document).click(function () {
@@ -67,6 +68,16 @@ $('.kz').mouseover(function() {
 
 $('.kz').mouseout(function() {
   $('.siteprev').removeClass('imgprev');
+  $('.epiccursor').removeClass('shrink');
+});
+
+$('.designBox').mouseover(function() {
+  $('.design-box').addClass('imgprev');
+  $('.epiccursor').addClass('shrink');
+});
+
+$('.designBox').mouseout(function() {
+  $('.design-box').removeClass('imgprev');
   $('.epiccursor').removeClass('shrink');
 });
 

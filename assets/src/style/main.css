@@ -283,7 +283,7 @@
   }
 }
 
-.siteprev {
+.siteprev, .design-box {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: fixed;
@@ -295,7 +295,7 @@
   will-change: opacity;
 }
 
-.siteprev img {
+.siteprev img, .design-box img {
   width: 100%;
 }
 

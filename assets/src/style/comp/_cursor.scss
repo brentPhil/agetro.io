@@ -1,84 +1,94 @@
-.epiccursor{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid $accent;
-    position: fixed;
-    z-index: 5;
-    opacity: .9;
-    pointer-events: none;
-    transition-duration: 100ms;
-    top: 48%;
-    left: 48%;
-} 
-.cursormain{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: white;
-    position: fixed;
-    z-index: 5;
-    pointer-events: none;
-    top: 50%;
-    left: 50%;
+.epiccursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $accent;
+  position: fixed;
+  z-index: 5;
+  opacity: 0.9;
+  pointer-events: none;
+  transition-duration: 100ms;
+  top: 48%;
+  left: 48%;
 }
-.addcopy{
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    z-index: 5;
-    pointer-events: none;
-    transform: scale(0);
-    background-image: url('../../svg/addcopy.svg');
+.cursormain {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+}
+.addcopy {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  transform: scale(0);
+  background-image: url("../../svg/addcopy.svg");
 }
 
-.shrink{
+.shrink {
+  transform: scale(1.2);
+  opacity: 0;
+}
+.sitegrow {
+  animation: cursorAnim2 0.5s forwards;
+}
+
+.expand {
+  animation: cursorAnim2 0.3s linear;
+}
+.grow {
+  animation: cursorAnim 0.5s infinite alternate;
+  border: 1px solid #0ff2b2;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
     transform: scale(1.2);
-    opacity: 0;
-}
-.sitegrow{
-    animation: cursorAnim2 .5s forwards;
+  }
 }
 
-.expand{
-    animation: cursorAnim2 0.3s linear;
+@keyframes cursorAnim2 {
+  25% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.grow{
-    animation: cursorAnim .5s infinite alternate;
-    border: 1px solid #0FF2B2;
-}
-
-@keyframes cursorAnim{
-    from{
-        transform:scale(1) ;
-    }
-    to{
-        transform:scale(1.2);
-    }
-}
-
-@keyframes cursorAnim2{
-  25%  {transform: scale(0);}
-  75%  {transform: scale(1.1);}
-  100%  {transform: scale(1);}
-}
-@keyframes cursorAnim3{
-  to{transform: scale(0);}
+@keyframes cursorAnim3 {
+  to {
+    transform: scale(0);
+  }
 }
 
-.siteprev, .design-box{
-    transform: translate(-50%, -50%);
-    position: fixed;
-    width: 350px;
-    pointer-events: none;
-    transition: .3s ease-out;
-    opacity: 0;
-    will-change: opacity;
-    img{
-        width: 100%;
-    }
+.siteprev,
+.design-box,
+.event_Calendar {
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 350px;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+  opacity: 0;
+  will-change: opacity;
+  img {
+    width: 100%;
+  }
 }
 
-.imgprev{
-    opacity: 1;
+.imgprev {
+  opacity: 1;
 }

@@ -265,10 +265,6 @@
   opacity: 1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -320,7 +316,7 @@ body a {
 .menu1 ul li a {
   text-decoration: none;
   color: #bbbbbb;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
 }
 .menu1 ul li a:hover {
@@ -396,13 +392,13 @@ header {
   margin: 0 auto;
 }
 .body h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: normal;
 }
 .body h2 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: lighter;
   color: #107369;
 }
@@ -411,7 +407,7 @@ header {
   margin-bottom: 0.5em;
   color: #bbbbbb;
   line-height: 1.5em;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Kanit", sans-serif;
 }
 .body text {
@@ -453,6 +449,7 @@ header {
 
 .illus {
   margin-bottom: 0.5em;
+  padding-right: 1rem;
 }
 .illus h1 {
   position: relative;
@@ -474,18 +471,18 @@ header {
 
 .about h6 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #bbbbbb;
   font-weight: lighter;
 }
 .about h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   font-weight: normal;
   color: #bbbbbb;
 }
 .about h5 a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .skill {
@@ -498,11 +495,11 @@ header {
 .skill span h3 {
   font-family: "Kanit", sans-serif;
   color: #bbbbbb;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 .skill span h5 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
 }
 
@@ -536,7 +533,7 @@ header {
   color: #bbbbbb;
   list-style: none;
   margin: 0.5em 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .wline {
@@ -560,7 +557,7 @@ header {
   margin: 0;
   font-weight: lighter;
   line-height: 1.7em;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #bbbbbb;
 }
 
@@ -618,7 +615,7 @@ header {
   color: #bbbbbb;
   font-weight: lighter;
   line-height: 1.5em;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 1em 0;
 }
 .footer h5 a {
@@ -668,7 +665,7 @@ header {
   margin: 0 0 1em 0;
 }
 .form-group span {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: white;
   position: absolute;
   top: 0.5em;
@@ -701,7 +698,7 @@ header {
   display: block;
   width: 100%;
   padding: 0.3em 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background: none;
   outline: none;
   cursor: none;
@@ -718,7 +715,7 @@ header {
   border: none;
   background: none;
   color: #0BBF8C;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Be Vietnam", sans-serif;
   transition: 0.5s;
   padding: 0;
@@ -744,7 +741,7 @@ textarea.form-control {
   color: #5a5a5a;
 }
 .footer1 span h6 {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   margin: 1.5em 0;
 }
 

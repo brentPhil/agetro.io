@@ -1,482 +1,475 @@
-@import '../style/comp/fsize';
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rationale&display=swap');
-@import url('http://fonts.cdnfonts.com/css/share-techmono-2');
-@import '../style/comp/nav';
-@import '../style/comp/cursor';
+@import "../style/comp/fsize";
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Rationale&display=swap");
+@import url("http://fonts.cdnfonts.com/css/share-techmono-2");
+@import "../style/comp/nav";
+@import "../style/comp/cursor";
 
-
-html{
-scroll-behavior: smooth;
-}
 ::-webkit-scrollbar {
-width: 10px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-background: $color4; 
+  background: $color4;
 }
 ::-webkit-scrollbar-thumb {
-background: $color2; 
+  background: $color2;
 }
 ::-webkit-scrollbar-thumb:hover {
-background: $accent;
+  background: $accent;
 }
 
-body{
-    margin: 0 auto;
-    background-color: $dark;
-    font-family: 'Be Vietnam', sans-serif;
-    color: $color2; 
+body {
+  margin: 0 auto;
+  background-color: $dark;
+  font-family: "Be Vietnam", sans-serif;
+  color: $color2;
+  cursor: none;
+
+  a {
     cursor: none;
-
-    a{
-        cursor: none;
-    }
-
+  }
 }
 
 // ---------------------------------nav_container---------------------------
-.nav_container{
-    width: 100%;
-    padding: .8em 0 3em 0;
-    background-image:linear-gradient( to bottom
-    ,$dark 50%,#000f1a00 100%);
-    position: fixed;
-    z-index: 4;
+.nav_container {
+  width: 100%;
+  padding: 0.8em 0 3em 0;
+  background-image: linear-gradient(to bottom, $dark 50%, #000f1a00 100%);
+  position: fixed;
+  z-index: 4;
 }
-.menu1{
-    width: 400px;
-    position: relative;
-    top: -5px;
-    right: 1em;
-    display: none;
-    ul{
+.menu1 {
+  width: 400px;
+  position: relative;
+  top: -5px;
+  right: 1em;
+  display: none;
+  ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     margin: 0;
-    li a{
-        text-decoration: none;
-        color: $color1;
-        font-size: $paragraph;
-        font-weight: lighter;
-        ;
+    li a {
+      text-decoration: none;
+      color: $color1;
+      font-size: $paragraph;
+      font-weight: lighter;
     }
-    li a:hover{
-        color:  $accent;
-    }
-}
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 96%;
-    margin: 0 auto;
-    padding: .2em 1.5vw;
-}
-//-------------------------------------------body---------------------------------------
-.bgl{
-    order: 2;
-    display: none;
-}
-.q{order: 1;}
-.arrow{
-    width: 12px;
-    position: relative;
-}
-.year{ 
-    position: relative;
-    top: -30px;
-    left: -20px;
-    display: flex;
-    transform: rotate(-90deg);
-    h6{
-        margin: 0;
-        color: $color1;
-        font-weight: lighter;
-        letter-spacing: .3em;
-    }
-    div{
-    width: 40px;
-    border-bottom: 1px solid $line;
-    margin-right: .5em;
-    height: 9px;
-}}
-
-.side{
-    width: 96%;
-    padding: 0 1.5vw;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 7vh;
-    z-index: -4;
-    margin: 0 auto;
-}
-.body_container{
-    height: auto;
-    padding: 1em 0;
-    transition: .8s ease-in-out;
-}
-.headline{
-    padding: 30vh 0;
-}
-
-.body{
-    width: 85%;
-    margin: 0 auto;
-    h3{
-        font-size: $paragraph + .1rem;
-        margin: 0;
-        font-weight: normal;
-    }
-    h2{
-        margin: 0;
-        font-size: $paragraph + .1rem;
-        font-weight: lighter;
-        color: $color3;
-    }
-    h4{
-        margin: 0;
-        margin-bottom: .5em;
-        color: $color1;
-        line-height: 1.5em;
-        font-size: $paragraph + .2rem;
-        font-family: 'Kanit', sans-serif;
-    }
-    text{
-        color: $color1;
-    }
-    a{
-        text-decoration: none;
-        color: $color2;
-        transition: .5s ease;
-    }
-    a:hover{
-        color: $accent;
-    }
-}
-.quote{
-    max-width: 500px;
-    margin: .5em 0;
-}
-.line{
-    padding: 1em 0;
-}
-
-.about_container, 
-.work_container,
-.footer{
-    h3{
-        font-size: $fcon;
-        font-weight: lighter;
-        color: $color3;
-    }
-
-}
-
-#work{
-    margin: 10em 0;
-}
-// ---------------------------------about_me---------------------------
-#about{
-    padding-top: 8em;
-}
-.illus{
-    margin-bottom: .5em;
-    h1{
-        position: relative;
-        margin: 0;
-        font-weight: bolder;
-        font-size: $heading + .5rem;
-        font-family: 'Kanit', sans-serif;
-        color: $color2;
-        line-height: 1em;
-        text{
-            font-size: $heading + .3rem;
-            color: $color2;
-        }
+    li a:hover {
+      color: $accent;
     }
   }
-.fc{
-    width: 100%;
 }
-.about{
-    h6{
-        margin: 0;
-        font-size: $paragraph;
-        color: $color1;
-        font-weight: lighter;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin: 0 auto;
+  padding: 0.2em 1.5vw;
+}
+//-------------------------------------------body---------------------------------------
+.bgl {
+  order: 2;
+  display: none;
+}
+.q {
+  order: 1;
+}
+.arrow {
+  width: 12px;
+  position: relative;
+}
+.year {
+  position: relative;
+  top: -30px;
+  left: -20px;
+  display: flex;
+  transform: rotate(-90deg);
+  h6 {
+    margin: 0;
+    color: $color1;
+    font-weight: lighter;
+    letter-spacing: 0.3em;
+  }
+  div {
+    width: 40px;
+    border-bottom: 1px solid $line;
+    margin-right: 0.5em;
+    height: 9px;
+  }
+}
+
+.side {
+  width: 96%;
+  padding: 0 1.5vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 7vh;
+  z-index: -4;
+  margin: 0 auto;
+}
+.body_container {
+  height: auto;
+  padding: 1em 0;
+  transition: 0.8s ease-in-out;
+}
+.headline {
+  padding: 30vh 0;
+}
+
+.body {
+  width: 85%;
+  margin: 0 auto;
+  h3 {
+    font-size: $paragraph + 0.1rem;
+    margin: 0;
+    font-weight: normal;
+  }
+  h2 {
+    margin: 0;
+    font-size: $paragraph + 0.1rem;
+    font-weight: lighter;
+    color: $color3;
+  }
+  h4 {
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: $color1;
+    line-height: 1.5em;
+    font-size: $paragraph + 0.2rem;
+    font-family: "Kanit", sans-serif;
+  }
+  text {
+    color: $color1;
+  }
+  a {
+    text-decoration: none;
+    color: $color2;
+    transition: 0.5s ease;
+  }
+  a:hover {
+    color: $accent;
+  }
+}
+.quote {
+  max-width: 500px;
+  margin: 0.5em 0;
+}
+.line {
+  padding: 1em 0;
+}
+
+.about_container,
+.work_container,
+.footer {
+  h3 {
+    font-size: $fcon;
+    font-weight: lighter;
+    color: $color3;
+  }
+}
+
+#work {
+  margin: 10em 0;
+}
+// ---------------------------------about_me---------------------------
+#about {
+  padding-top: 8em;
+}
+.illus {
+  margin-bottom: 0.5em;
+  padding-right: 1rem;
+  h1 {
+    position: relative;
+    margin: 0;
+    font-weight: bolder;
+    font-size: $heading + 0.5rem;
+    font-family: "Kanit", sans-serif;
+    color: $color2;
+    line-height: 1em;
+    text {
+      font-size: $heading + 0.3rem;
+      color: $color2;
     }
-    h5{
-      font-size: $paragraph + .2rem;
-      margin: 0;
-      font-weight: normal;
-      color: $color1;
-        a{
-            font-size: $paragraph + .2rem;
-        }    
+  }
+}
+.fc {
+  width: 100%;
+}
+.about {
+  h6 {
+    margin: 0;
+    font-size: $paragraph;
+    color: $color1;
+    font-weight: lighter;
+  }
+  h5 {
+    font-size: $paragraph + 0.2rem;
+    margin: 0;
+    font-weight: normal;
+    color: $color1;
+    a {
+      font-size: $paragraph + 0.2rem;
     }
+  }
 }
 
 // ---------------------------------skill---------------------------
-.skill{
-    display: flex;
-    width: 100%;
-    span{
-        margin: 1.5em 0;
-        h3{
-            font-family: 'Kanit', sans-serif;
-            color: $color1;
-            font-size: $paragraph + .2rem;
-            font-weight: bold;
-        }
-        h5{
-            font-size: $paragraph;
-            font-weight: lighter;
-        }
+.skill {
+  display: flex;
+  width: 100%;
+  span {
+    margin: 1.5em 0;
+    h3 {
+      font-family: "Kanit", sans-serif;
+      color: $color1;
+      font-size: $paragraph + 0.2rem;
+      font-weight: bold;
     }
+    h5 {
+      font-size: $paragraph;
+      font-weight: lighter;
+    }
+  }
 }
-.icon{
-    width: 3em;
-    margin-top: .5em;
-    margin-right: 2em;
+.icon {
+  width: 3em;
+  margin-top: 0.5em;
+  margin-right: 2em;
 }
 
-.tools{
-    margin: 2em 0;
-    width: 100%;
+.tools {
+  margin: 2em 0;
+  width: 100%;
 }
-.thead{
-    h2{
-        line-height: 1em;
-        color: rgb(243, 243, 243);
-        font-size: $heading + .5rem;
-        font-family: 'Kanit', sans-serif;
-    }
+.thead {
+  h2 {
+    line-height: 1em;
+    color: rgb(243, 243, 243);
+    font-size: $heading + 0.5rem;
+    font-family: "Kanit", sans-serif;
+  }
 }
-.techs{
+.techs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  span {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    span{
-        width: 100%;
-        li{
-            color: $color1;
-            list-style: none;
-            margin: .5em 0;
-            font-size: $paragraph + .1rem;
-        }
+    li {
+      color: $color1;
+      list-style: none;
+      margin: 0.5em 0;
+      font-size: $paragraph + 0.1rem;
     }
+  }
 }
 // ---------------------------------my_work---------------------------
-.wline{
-    padding: 1em 0;
+.wline {
+  padding: 1em 0;
 }
-.work{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5em 0;
-    padding-right: 1em;
-    position: relative;
-    border-bottom: solid 1px $line;
-    h4{
-        margin-bottom: .5em;
-        color: white;
-        font-family: 'Kanit', sans-serif;
-    }
-    h5{
-        margin: 0;
-        font-weight: lighter;
-        line-height: 1.7em;
-        font-size: $paragraph;
-        color: $color1;
-    }
-}
-
-.argo{
-    margin-left: 2em;
-    padding-top: 5px;
-    img{
-        transform: rotate(-90deg);
-        transition: .2s ease-in-out;
-    }
+.work {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0;
+  padding-right: 1em;
+  position: relative;
+  border-bottom: solid 1px $line;
+  h4 {
+    margin-bottom: 0.5em;
+    color: white;
+    font-family: "Kanit", sans-serif;
+  }
+  h5 {
+    margin: 0;
+    font-weight: lighter;
+    line-height: 1.7em;
+    font-size: $paragraph;
+    color: $color1;
+  }
 }
 
-.work:hover .argo img{
-    transform: rotate(-130deg);
+.argo {
+  margin-left: 2em;
+  padding-top: 5px;
+  img {
+    transform: rotate(-90deg);
+    transition: 0.2s ease-in-out;
+  }
 }
 
-.overlay{
-    position: absolute;
-    font-weight: bolder;
-    color: rgb(85, 85, 85);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    transition: .5s ease-in-out;
+.work:hover .argo img {
+  transform: rotate(-130deg);
 }
 
-.work:hover .overlay{
-    opacity: .9;
+.overlay {
+  position: absolute;
+  font-weight: bolder;
+  color: rgb(85, 85, 85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.work:hover .overlay {
+  opacity: 0.9;
 }
 
 // ---------------------------------footer---------------------------
-.footer{
+.footer {
+  width: 100%;
+  .int {
+    margin: 0 auto;
     width: 100%;
-    .int{
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  h2 {
+    color: white;
+    font-size: $heading;
+    font-family: "Kanit", sans-serif;
+  }
+  h3 {
+    margin: 0;
+  }
+  h5 {
+    color: $color1;
+    font-weight: lighter;
+    line-height: 1.5em;
+    font-size: $paragraph;
+    margin: 1em 0;
+    a {
+      color: $accent;
+      margin: 0;
     }
-    h2{
-        color: white;
-        font-size: $heading;
-        font-family: 'Kanit', sans-serif;
-        }
-        h3{
-            margin: 0;
-        }
-    h5{
-        color: $color1;
-        font-weight: lighter;
-        line-height: 1.5em;
-        font-size: $paragraph;
-        margin: 1em 0;
-        a{
-            color: $accent;
-            margin: 0;
-        }
-        
-    }
-    form{
-        margin: .5em 0;
-        border: solid 1px $line;
-        padding: 1.5em 1em ;
-    }
+  }
+  form {
+    margin: 0.5em 0;
+    border: solid 1px $line;
+    padding: 1.5em 1em;
+  }
 }
 
-.link{
-    display: grid;
-    align-content: center;
-    margin-left: 1em;
-    background: none;
-    color: $color1;
-    cursor: none;
-    border: none;
-    padding: 0 1.5em;
-    background: black;
-    transition: .3s linear;
+.link {
+  display: grid;
+  align-content: center;
+  margin-left: 1em;
+  background: none;
+  color: $color1;
+  cursor: none;
+  border: none;
+  padding: 0 1.5em;
+  background: black;
+  transition: 0.3s linear;
 }
-.clipb{
-    position: relative;
-    bottom: -2px;
+.clipb {
+  position: relative;
+  bottom: -2px;
 }
 
 .link:active {
-    .clipb{
-        animation: cursorAnim2 0.3s linear 1;
-    }
+  .clipb {
+    animation: cursorAnim2 0.3s linear 1;
+  }
 }
-.con{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 1em;
-    border-bottom: solid 1px $line;
-    transition: .4s ease-in-out;
+.con {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 1em;
+  border-bottom: solid 1px $line;
+  transition: 0.4s ease-in-out;
 }
-
 
 .form-group {
-	position: relative;
-    margin: 0 0 1em 0;
-	span {
-		font-size: $paragraph - .2rem;
-		color: white;
-		position: absolute;
-		top: .5em;
-		transition: all .2s ease;
-		transform-origin: 0 0;
-		cursor: text;
-        font-weight: lighter;
-        pointer-events: none;
-	}
-	.border {
-		height: 2px;
-		display: block;
-		position: relative;
-		left: 0;
-        top: -2px;
-		transform: scaleX(0);
-		transition: all .3s ease;
-		background: $accent;
-	}
+  position: relative;
+  margin: 0 0 1em 0;
+  span {
+    font-size: $paragraph - 0.2rem;
+    color: white;
+    position: absolute;
+    top: 0.5em;
+    transition: all 0.2s ease;
+    transform-origin: 0 0;
+    cursor: text;
+    font-weight: lighter;
+    pointer-events: none;
+  }
+  .border {
+    height: 2px;
+    display: block;
+    position: relative;
+    left: 0;
+    top: -2px;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    background: $accent;
+  }
 }
-.mb{
-    margin-bottom: .5em;
+.mb {
+  margin-bottom: 0.5em;
 }
 .form-control {
-    font-family: 'Be Vietnam', sans-serif;
-	border: none;
-    color: white;
-	border-bottom: solid $line 2px;
-	display: block;
-	width: 100%;
-    padding: .3em 0;
-	font-size: $paragraph - .2rem;
-	background: none;
-    outline: none;
-    cursor: none;
-	&:focus, &:valid {
-		& + span {
-			transform: translateY(-1.5em) scale(.7);
-            color: $accent;
-			& + .border {
-				transform: scaleX(1);
-			}
-		}
-	}
-    
+  font-family: "Be Vietnam", sans-serif;
+  border: none;
+  color: white;
+  border-bottom: solid $line 2px;
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  font-size: $paragraph - 0.2rem;
+  background: none;
+  outline: none;
+  cursor: none;
+  &:focus,
+  &:valid {
+    & + span {
+      transform: translateY(-1.5em) scale(0.7);
+      color: $accent;
+      & + .border {
+        transform: scaleX(1);
+      }
+    }
+  }
 }
-.send{
-        border: none;
-        background: none;
-        color: $color2;
-        font-size: $paragraph;
-        font-family: 'Be Vietnam', sans-serif;
-        transition: .5s;
-        padding: 0;
-    }
-    .send:hover{
-        color: $accent;
-    }
+.send {
+  border: none;
+  background: none;
+  color: $color2;
+  font-size: $paragraph;
+  font-family: "Be Vietnam", sans-serif;
+  transition: 0.5s;
+  padding: 0;
+}
+.send:hover {
+  color: $accent;
+}
 textarea.form-control {
-    height: 60px;
+  height: 60px;
 }
 
-.footer1{
-    margin-top: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-top: solid $color2 1px;
-    span{
+.footer1 {
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid $color2 1px;
+  span {
     font-weight: lighter;
     color: #5a5a5a;
-    h6{
-        font-size: $paragraph - .4rem;
-        margin: 1.5em 0;
+    h6 {
+      font-size: $paragraph - 0.4rem;
+      margin: 1.5em 0;
     }
-}
+  }
 }
 
-@import '../style/comp/media';
-
+@import "../style/comp/media";

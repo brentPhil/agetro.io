@@ -117,17 +117,7 @@
 }
 
 .test #path {
-  -webkit-animation: clipanim 0.3s linear forwards;
-          animation: clipanim 0.3s linear forwards;
-}
-
-@-webkit-keyframes clipanim {
-  from {
-    stroke-dashoffset: 11;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  animation: clipanim 0.3s linear forwards;
 }
 
 @keyframes clipanim {
@@ -180,28 +170,16 @@
 }
 
 .sitegrow {
-  -webkit-animation: cursorAnim2 0.5s forwards;
-          animation: cursorAnim2 0.5s forwards;
+  animation: cursorAnim2 0.5s forwards;
 }
 
 .expand {
-  -webkit-animation: cursorAnim2 0.3s linear;
-          animation: cursorAnim2 0.3s linear;
+  animation: cursorAnim2 0.3s linear;
 }
 
 .grow {
-  -webkit-animation: cursorAnim 0.5s infinite alternate;
-          animation: cursorAnim 0.5s infinite alternate;
+  animation: cursorAnim 0.5s infinite alternate;
   border: 1px solid #0ff2b2;
-}
-
-@-webkit-keyframes cursorAnim {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
 }
 
 @keyframes cursorAnim {
@@ -210,17 +188,6 @@
   }
   to {
     transform: scale(1.2);
-  }
-}
-@-webkit-keyframes cursorAnim2 {
-  25% {
-    transform: scale(0);
-  }
-  75% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes cursorAnim2 {
@@ -234,35 +201,23 @@
     transform: scale(1);
   }
 }
-@-webkit-keyframes cursorAnim3 {
-  to {
-    transform: scale(0);
-  }
-}
 @keyframes cursorAnim3 {
   to {
     transform: scale(0);
   }
 }
-.siteprev,
-.design-box,
-.event_Calendar {
+.preview-image {
   transform: translate(-50%, -50%);
   position: fixed;
   width: 350px;
   pointer-events: none;
+  transition-duration: 100ms;
   transition: 0.3s ease-out;
   opacity: 0;
-  will-change: opacity;
 }
-.siteprev img,
-.design-box img,
-.event_Calendar img {
-  width: 100%;
-}
-
-.imgprev {
-  opacity: 1;
+.preview-image img {
+  width: 300px;
+  height: 200px;
 }
 
 ::-webkit-scrollbar {
@@ -647,8 +602,7 @@ header {
 }
 
 .link:active .clipb {
-  -webkit-animation: cursorAnim2 0.3s linear 1;
-          animation: cursorAnim2 0.3s linear 1;
+  animation: cursorAnim2 0.3s linear 1;
 }
 
 .con {

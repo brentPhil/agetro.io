@@ -1,0 +1,42 @@
+[
+  {
+      "title": "React Event Calendar",
+      "description": "Introducing my custom event calendar app, built with ReactJS, TailwindCSS, Framer Motion, and MomentJS. It's a work in progress, but you can still check it out. The calendar offers an interactive way to manage events. It utilizes Framer Motion for smooth animations and MomentJS for easy date management. Give it a try!",
+      "link": "https://calendar-agetrographic.netlify.app",
+      "class": "eventCalendar",
+      "delay": "1.5s",
+      "preview": "assets/src/img/calendar.png"
+  },
+  {
+      "title": "KZ lagunzad",
+      "description": "Developed a professional web portfolio for a virtual assistant in the Philippines using hand-coded techniques and attention to detail to showcase their skills and experience.",
+      "link": "https://kz-lagunzad.netlify.app",
+      "class": "kz",
+      "delay": "1s",
+      "preview": "assets/src/img/KZ.png"
+  },
+  {
+      "title": "myFaith.center",
+      "description": "Created a visually-stunning and functional website for a religious organization using a combination of Webflow and Figma for design and development.",
+      "link": "https://myfaithcenter.webflow.io/",
+      "class": "designBox",
+      "delay": "1.5s",
+      "preview": "assets/src/img/myFaith.png"
+  },
+  {
+      "title": "EVSU R.A.D.S. (Registrar's Document Archiving System)",
+      "description": "EVSU R.A.D.S. is a digital archiving system developed to manage and retrieve student records at Eastern Visayas State University-Tanauan Campus. It digitizes physical documents by scanning them into a secure database, ensuring easy access, disaster resilience, and reduced storage costs. The system is built using Next.js, Tailwind CSS, NextUI, and Supabase.",
+      "link": "https://evsu-credease.vercel.app/",
+      "class": "EVSU",
+      "delay": "1.5s",
+      "preview": "assets/src/img/EVSU-R.A.D.S.png"
+  },
+  {
+      "title": "AGETRO GRAPHIC",
+      "description": "My high-performance portfolio website is both responsive and visually engaging, utilizing the latest technologies such as SVG, Sal.js, and custom cursor animations to provide an enriched user experience. It was built using plain HTML, CSS, JavaScript and jQuery to create a website that is both functional and visually appealing.",
+      "link": "#",
+      "class": "",
+      "delay": "2s",
+      "preview": "path/to/preview-image.jpg"
+  }
+]

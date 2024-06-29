@@ -74,21 +74,16 @@
   }
 }
 
-.siteprev,
-.design-box,
-.event_Calendar {
-  transform: translate(-50%, -50%);
-  position: fixed;
-  width: 350px;
-  pointer-events: none;
-  transition: 0.3s ease-out;
-  opacity: 0;
-  will-change: opacity;
+.preview-image {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 350px;
+    pointer-events: none;
+    transition-duration: 100ms;
+    transition: 0.3s ease-out;
+    opacity: 0;
   img {
-    width: 100%;
+    width: 300px; 
+    height: 200px;
   }
-}
-
-.imgprev {
-  opacity: 1;
 }

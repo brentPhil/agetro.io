@@ -419,8 +419,7 @@ body.sal-disabled [data-sal|=zoom] {
 }
 
 [data-sal|=flip] {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition-property: transform;
 }
 

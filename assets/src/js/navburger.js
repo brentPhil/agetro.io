@@ -1,125 +1,80 @@
-const menuBtn = document.querySelector(".menu-btn")
-const menu = document.querySelector(".menu")
-const menuNav = document.querySelector(".menu-nav")
-const navItems = document.querySelectorAll(".nav-item")
-let showMenu = false
-menuBtn.addEventListener("click", toggleMenu)
-navItems.forEach((item) => item.addEventListener("click", toggleMenu))
-function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add("close")
-    menu.classList.add("show")
-    menuNav.classList.add("show")
-    navItems.forEach((item) => item.classList.add("show"))
-    navItems.forEach((item) => item.classList.remove("close"))
-    showMenu = true
-  } else {
-    menuBtn.classList.remove("close")
-    menu.classList.remove("show")
-    menuNav.classList.remove("show")
-    navItems.forEach((item) => item.classList.add("close"))
-    showMenu = false
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
+  const menuNav = document.querySelector(".menu-nav");
+  const navItems = document.querySelectorAll(".nav-item");
+  let showMenu = false;
+
+  function toggleMenu() {
+    menuBtn.classList.toggle("close", !showMenu);
+    menu.classList.toggle("show", !showMenu);
+    menuNav.classList.toggle("show", !showMenu);
+    navItems.forEach((item) => {
+      item.classList.toggle("show", !showMenu);
+      item.classList.toggle("close", showMenu);
+    });
+    showMenu = !showMenu;
   }
-}
 
-function copyToClipboard(element) {
-  var $temp = $("<input>")
-  $("body").append($temp)
-  $temp.val($(element).text()).select()
-  document.execCommand("copy")
-  $temp.remove()
-}
+  menuBtn.addEventListener("click", toggleMenu);
+  navItems.forEach((item) => item.addEventListener("click", toggleMenu));
 
-btn.addEventListener("click", () => {
-  btn.classList.add("test")
-})
+  function copyToClipboard(element) {
+    const tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = document.querySelector(element).textContent;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  }
 
-path.addEventListener("animationend", () => {
-  console.log("end")
+  const btn = document.querySelector("#btn");
+  btn.addEventListener("click", () => {
+    btn.classList.add("test");
+  });
 
-  setTimeout(() => {
-    btn.classList.remove("test")
-  }, 1000)
-})
+  const path = document.querySelector(".path"); // Assuming .path is a class
+  path.addEventListener("animationend", () => {
+    console.log("end");
+    setTimeout(() => {
+      btn.classList.remove("test");
+    }, 1000);
+  });
 
-$(document).mousemove(function (e) {
-  $(".cursormain").attr(
-    "style",
-    "top:" + (e.clientY - 2) + "px; left: " + (e.clientX - 2) + "px;"
-  )
-  $(".epiccursor").attr(
-    "style",
-    "top:" + (e.clientY - 15) + "px; left: " + (e.clientX - 15) + "px;"
-  )
-  $(".addcopy").attr(
-    "style",
-    "top:" + (e.clientY - 38.5) + "px; left: " + (e.clientX - 38.5) + "px;"
-  )
-  $(".siteprev").attr(
-    "style",
-    "top:" + e.clientY + "px; left: " + e.clientX + "px;"
-  )
-  $(".design-box").attr(
-    "style",
-    "top:" + e.clientY + "px; left: " + e.clientX + "px;"
-  )
-  $(".event_Calendar").attr(
-    "style",
-    "top:" + e.clientY + "px; left: " + e.clientX + "px;"
-  )
-})
+  $(document).mousemove((e) => {
+    const positions = [
+      { selector: ".cursormain", xOffset: -2, yOffset: -2 },
+      { selector: ".epiccursor", xOffset: -15, yOffset: -15 },
+      { selector: ".addcopy", xOffset: -38.5, yOffset: -38.5 },
+    ];
 
-$(document).click(function () {
-  $(".epiccursor").addClass("expand")
-  setTimeout(function () {
-    $(".epiccursor").removeClass("expand")
-  }, 500)
-})
+    positions.forEach(({ selector, xOffset, yOffset }) => {
+      $(selector).css({
+        top: e.clientY + yOffset + "px",
+        left: e.clientX + xOffset + "px",
+      });
+    });
+  });
 
-$(".kz").mouseover(function () {
-  $(".siteprev").addClass("imgprev")
-  $(".epiccursor").addClass("shrink")
-})
+  $(document).click(() => {
+    $(".epiccursor").addClass("expand");
+    setTimeout(() => {
+      $(".epiccursor").removeClass("expand");
+    }, 500);
+  });
 
-$(".kz").mouseout(function () {
-  $(".siteprev").removeClass("imgprev")
-  $(".epiccursor").removeClass("shrink")
-})
+  const hoverEffects = [
+    { hover: ".sitenav", target: ".epiccursor", cursorClass: "grow" },
+    { hover: "#btn", target: ".addcopy", cursorClass: "shrink", targetClass: "sitegrow" },
+  ];
 
-$(".designBox").mouseover(function () {
-  $(".design-box").addClass("imgprev")
-  $(".epiccursor").addClass("shrink")
-})
-
-$(".eventCalendar").mouseover(function () {
-  $(".event_Calendar").addClass("imgprev")
-  $(".epiccursor").addClass("shrink")
-})
-
-$(".designBox").mouseout(function () {
-  $(".design-box").removeClass("imgprev")
-  $(".epiccursor").removeClass("shrink")
-})
-
-$(".eventCalendar").mouseout(function () {
-  $(".event_Calendar").removeClass("imgprev")
-  $(".epiccursor").removeClass("shrink")
-})
-
-$(".sitenav").mouseover(function () {
-  $(".epiccursor").addClass("grow")
-})
-
-$(".sitenav").mouseout(function () {
-  $(".epiccursor").removeClass("grow")
-})
-
-$("#btn").mouseover(function () {
-  $(".addcopy").addClass("sitegrow")
-  $(".epiccursor").addClass("shrink")
-})
-
-$("#btn").mouseout(function () {
-  $(".addcopy").removeClass("sitegrow")
-  $(".epiccursor").removeClass("shrink")
-})
+  hoverEffects.forEach(({ hover, target, cursorClass, targetClass }) => {
+    $(hover).mouseover(() => {
+      $(target).addClass(targetClass);
+      $(".epiccursor").addClass(cursorClass);
+    }).mouseout(() => {
+      $(target).removeClass(targetClass);
+      $(".epiccursor").removeClass(cursorClass);
+    });
+  });
+});

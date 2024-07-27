@@ -122,9 +122,10 @@ header {
   width: 85%;
   margin: 0 auto;
   h3 {
-    font-size: $paragraph + 0.1rem;
+    color: $color1;
+    font-size: $paragraph;
     margin: 0;
-    font-weight: normal;
+    font-weight: 300;
   }
   h2 {
     margin: 0;
@@ -136,8 +137,9 @@ header {
     margin: 0;
     margin-bottom: 0.5em;
     color: $color1;
-    line-height: 1.5em;
-    font-size: $paragraph + 0.2rem;
+    line-height: 1.2em;
+    font-weight: bolder;
+    font-size: $paragraph + 0.4rem;
     font-family: "Kanit", sans-serif;
   }
   text {
@@ -165,7 +167,7 @@ header {
 .footer {
   h3 {
     font-size: $fcon;
-    font-weight: lighter;
+    font-weight: light;
     color: $color3;
   }
 }

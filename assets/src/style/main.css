@@ -57,7 +57,7 @@
 }
 .menu-nav a {
   text-decoration: none;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 .menu-nav li {
   list-style-type: none;
@@ -270,7 +270,7 @@ body a {
 }
 .menu1 ul li a {
   text-decoration: none;
-  color: #bbbbbb;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: lighter;
 }
@@ -310,7 +310,7 @@ header {
 }
 .year h6 {
   margin: 0;
-  color: #bbbbbb;
+  color: #ffffff;
   font-weight: lighter;
   letter-spacing: 0.3em;
 }
@@ -347,26 +347,28 @@ header {
   margin: 0 auto;
 }
 .body h3 {
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
   margin: 0;
-  font-weight: normal;
+  font-weight: 300;
 }
 .body h2 {
   margin: 0;
   font-size: 1rem;
   font-weight: lighter;
-  color: #107369;
+  color: #03c58e;
 }
 .body h4 {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #bbbbbb;
-  line-height: 1.5em;
-  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.2em;
+  font-weight: bolder;
+  font-size: 1.3rem;
   font-family: "Kanit", sans-serif;
 }
 .body text {
-  color: #bbbbbb;
+  color: #ffffff;
 }
 .body a {
   text-decoration: none;
@@ -390,8 +392,8 @@ header {
 .work_container h3,
 .footer h3 {
   font-size: 1.1rem;
-  font-weight: lighter;
-  color: #107369;
+  font-weight: light;
+  color: #03c58e;
 }
 
 #work {
@@ -427,14 +429,14 @@ header {
 .about h6 {
   margin: 0;
   font-size: 0.9rem;
-  color: #bbbbbb;
+  color: #ffffff;
   font-weight: lighter;
 }
 .about h5 {
   font-size: 1.1rem;
   margin: 0;
   font-weight: normal;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 .about h5 a {
   font-size: 1.1rem;
@@ -449,7 +451,7 @@ header {
 }
 .skill span h3 {
   font-family: "Kanit", sans-serif;
-  color: #bbbbbb;
+  color: #ffffff;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -485,7 +487,7 @@ header {
   width: 100%;
 }
 .techs span li {
-  color: #bbbbbb;
+  color: #ffffff;
   list-style: none;
   margin: 0.5em 0;
   font-size: 1rem;
@@ -513,7 +515,7 @@ header {
   font-weight: lighter;
   line-height: 1.7em;
   font-size: 0.9rem;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 
 .argo {
@@ -567,7 +569,7 @@ header {
   margin: 0;
 }
 .footer h5 {
-  color: #bbbbbb;
+  color: #ffffff;
   font-weight: lighter;
   line-height: 1.5em;
   font-size: 0.9rem;
@@ -588,7 +590,7 @@ header {
   align-content: center;
   margin-left: 1em;
   background: none;
-  color: #bbbbbb;
+  color: #ffffff;
   cursor: none;
   border: none;
   padding: 0 1.5em;
